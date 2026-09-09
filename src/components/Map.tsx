@@ -57,14 +57,13 @@ function findClosestSTA(coord: [number, number], staLabels: any) {
     }
   }
   
-  // Let's expand the radius to 1000m (1km) so they get some reading if slightly off
   if (minDistance < 1000 && closestFeature) {
     return { name: closestFeature.properties.name, distance: minDistance };
   }
   return null; 
 }
 
-function DynamicMarkers({ searchedCoord, focusedFeatureCoord, myLocation, roadGeoJson, staLabels }: any) {
+function DynamicMarker({ coord, isMyLocation, roadGeoJson, staLabels, triggerTime }: any) {
   const map = useMap();
   const markerRef = useRef<L.Marker>(null);
   
@@ -72,42 +71,23 @@ function DynamicMarkers({ searchedCoord, focusedFeatureCoord, myLocation, roadGe
   const [closestSta, setClosestSta] = useState<any>(null);
 
   useEffect(() => {
-    if (searchedCoord) {
-      map.flyTo(searchedCoord, 16, { animate: true, duration: 1.5 });
-      setHandlingResult(checkHandling(searchedCoord, roadGeoJson));
-      setClosestSta(findClosestSTA(searchedCoord, staLabels));
+    if (coord) {
+      map.flyTo(coord, 16, { animate: true, duration: 1.5 });
+      setHandlingResult(checkHandling(coord, roadGeoJson));
+      setClosestSta(findClosestSTA(coord, staLabels));
     }
-  }, [searchedCoord, map, roadGeoJson, staLabels]);
+  }, [coord, map, roadGeoJson, staLabels, triggerTime]);
 
   useEffect(() => {
-    if (myLocation) {
-      map.flyTo(myLocation, 17, { animate: true, duration: 1.5 });
-      setHandlingResult(checkHandling(myLocation, roadGeoJson));
-      setClosestSta(findClosestSTA(myLocation, staLabels));
-    }
-  }, [myLocation, map, roadGeoJson, staLabels]);
-
-  useEffect(() => {
-    if (focusedFeatureCoord) {
-      map.flyTo(focusedFeatureCoord, 16, { animate: true, duration: 1.5 });
-      setHandlingResult(null); 
-    }
-  }, [focusedFeatureCoord, map]);
-
-  // Auto-open popup when activeCoord changes
-  const activeCoord = myLocation || searchedCoord;
-  useEffect(() => {
-    if (activeCoord && markerRef.current) {
-      // Delay opening popup to allow map to fly first
+    if (coord && markerRef.current) {
       setTimeout(() => {
         markerRef.current?.openPopup();
       }, 500);
     }
-  }, [activeCoord]);
+  }, [coord, triggerTime]);
 
-  if (!activeCoord) return null;
+  if (!coord) return null;
 
-  const isMyLocation = !!myLocation && activeCoord === myLocation;
   const iconColor = isMyLocation ? '#3b82f6' : '#ef4444'; 
   
   const customIcon = new L.DivIcon({
@@ -118,7 +98,7 @@ function DynamicMarkers({ searchedCoord, focusedFeatureCoord, myLocation, roadGe
   });
 
   return (
-    <Marker position={activeCoord} icon={customIcon} ref={markerRef}>
+    <Marker position={coord} icon={customIcon} ref={markerRef}>
       <Popup>
         <div className="p-2 min-w-[220px]">
           <h3 className="font-bold text-lg border-b pb-1 mb-2">
@@ -154,6 +134,17 @@ function DynamicMarkers({ searchedCoord, focusedFeatureCoord, myLocation, roadGe
   );
 }
 
+// Separate component just to handle flying to clicked features in the list
+function FeatureFocusController({ focusedFeatureCoord }: any) {
+  const map = useMap();
+  useEffect(() => {
+    if (focusedFeatureCoord) {
+      map.flyTo(focusedFeatureCoord, 16, { animate: true, duration: 1.5 });
+    }
+  }, [focusedFeatureCoord, map]);
+  return null;
+}
+
 const createSmallDot = (color: string) => {
   return new L.DivIcon({
     className: "clear-icon",
@@ -165,13 +156,23 @@ const createSmallDot = (color: string) => {
 
 export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, baseRoad, staLabels }: any) {
   const center: [number, number] = [-2.919, 103.463];
+  
   const [myLocation, setMyLocation] = useState<[number, number] | null>(null);
+  const [myLocationTrigger, setMyLocationTrigger] = useState(0);
+  
+  const [searchTrigger, setSearchTrigger] = useState(0);
+
+  // When searchedCoord props update from parent (Sidebar), trigger popup
+  useEffect(() => {
+    if (searchedCoord) setSearchTrigger(Date.now());
+  }, [searchedCoord]);
 
   const handleGetLocation = () => {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           setMyLocation([position.coords.latitude, position.coords.longitude]);
+          setMyLocationTrigger(Date.now());
         },
         (error) => {
           alert("Gagal mendapatkan lokasi. Pastikan GPS/Location aktif di HP Anda dan izin browser diberikan.");
@@ -221,7 +222,10 @@ export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, b
           </LayersControl.BaseLayer>
         </LayersControl>
 
-        <DynamicMarkers searchedCoord={searchedCoord} focusedFeatureCoord={focusedFeatureCoord} myLocation={myLocation} roadGeoJson={roadGeoJson} staLabels={staLabels} />
+        <FeatureFocusController focusedFeatureCoord={focusedFeatureCoord} />
+
+        <DynamicMarker coord={searchedCoord} isMyLocation={false} roadGeoJson={roadGeoJson} staLabels={staLabels} triggerTime={searchTrigger} />
+        <DynamicMarker coord={myLocation} isMyLocation={true} roadGeoJson={roadGeoJson} staLabels={staLabels} triggerTime={myLocationTrigger} />
 
         {baseRoad && (
           <GeoJSON 
