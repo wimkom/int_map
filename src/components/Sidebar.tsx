@@ -26,9 +26,9 @@ export default function Sidebar({
     let type = "Lainnya";
     const color = h.properties.stroke;
     if (color === "#ff0000") type = "Rekonstruksi";
-    else if (color === "#ffff00") type = "Rehab Mayor/Minor";
-    else if (color === "#00ff00") type = "Pemeliharaan Rutin";
-    else if (color === "#0000ff") type = "Overlay/Lainnya";
+    else if (color === "#ffff00") type = "Rehab Mayor";
+    else if (color === "#00ff00") type = "Rehab Minor";
+    else if (color === "#0000ff") type = "Pemeliharaan Rutin / Lainnya";
 
     if (!groupedHandlings[type]) groupedHandlings[type] = [];
     groupedHandlings[type].push(h);
@@ -113,16 +113,16 @@ export default function Sidebar({
             <div className="grid grid-cols-2 gap-3 mb-8">
               <StatCard title="Total" count={handlings.length} colorClass="text-blue-600 border-blue-100" icon={Activity} />
               <StatCard title="Rekonstruksi" count={groupedHandlings["Rekonstruksi"]?.length || 0} colorClass="text-red-600 border-red-100" icon={MapPin} />
-              <StatCard title="Rehab" count={groupedHandlings["Rehab Mayor/Minor"]?.length || 0} colorClass="text-amber-500 border-amber-100" icon={CheckCircle} />
-              <StatCard title="Rutin" count={groupedHandlings["Pemeliharaan Rutin"]?.length || 0} colorClass="text-emerald-600 border-emerald-100" icon={Clock} />
+              <StatCard title="Rehab Mayor" count={groupedHandlings["Rehab Mayor"]?.length || 0} colorClass="text-amber-500 border-amber-100" icon={CheckCircle} />
+              <StatCard title="Rehab Minor" count={groupedHandlings["Rehab Minor"]?.length || 0} colorClass="text-emerald-600 border-emerald-100" icon={Clock} />
             </div>
 
             <h2 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-3">Legenda Warna</h2>
             <div className="space-y-3 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
               <div className="flex items-center text-sm font-semibold text-slate-700"><div className="w-4 h-4 rounded-full bg-[#ff0000] mr-3 shadow-sm ring-2 ring-red-100"></div> Rekonstruksi</div>
-              <div className="flex items-center text-sm font-semibold text-slate-700"><div className="w-4 h-4 rounded-full bg-[#ffff00] mr-3 shadow-sm ring-2 ring-yellow-100"></div> Rehab Mayor/Minor</div>
-              <div className="flex items-center text-sm font-semibold text-slate-700"><div className="w-4 h-4 rounded-full bg-[#00ff00] mr-3 shadow-sm ring-2 ring-green-100"></div> Pemeliharaan Rutin</div>
-              <div className="flex items-center text-sm font-semibold text-slate-700"><div className="w-4 h-4 rounded-full bg-[#0000ff] mr-3 shadow-sm ring-2 ring-blue-100"></div> Overlay/Lainnya</div>
+              <div className="flex items-center text-sm font-semibold text-slate-700"><div className="w-4 h-4 rounded-full bg-[#ffff00] mr-3 shadow-sm ring-2 ring-yellow-100"></div> Rehab Mayor</div>
+              <div className="flex items-center text-sm font-semibold text-slate-700"><div className="w-4 h-4 rounded-full bg-[#00ff00] mr-3 shadow-sm ring-2 ring-green-100"></div> Rehab Minor</div>
+              <div className="flex items-center text-sm font-semibold text-slate-700"><div className="w-4 h-4 rounded-full bg-[#0000ff] mr-3 shadow-sm ring-2 ring-blue-100"></div> Pemeliharaan Rutin / Lainnya</div>
               <div className="flex items-center text-xs font-semibold text-slate-400 mt-3 pt-3 border-t border-slate-100"><div className="w-4 h-4 rounded-full bg-slate-400 mr-3 opacity-50 border-2 border-dashed border-slate-600"></div> Ruas Jalan Dasar (Panduan)</div>
             </div>
           </div>
@@ -153,8 +153,8 @@ export default function Sidebar({
                 let borderColor = "border-slate-300";
                 let badgeColor = "bg-slate-100 text-slate-600";
                 if (type === "Rekonstruksi") { borderColor = "border-red-500"; badgeColor = "bg-red-50 text-red-700"; }
-                if (type === "Rehab Mayor/Minor") { borderColor = "border-amber-400"; badgeColor = "bg-amber-50 text-amber-700"; }
-                if (type === "Pemeliharaan Rutin") { borderColor = "border-emerald-500"; badgeColor = "bg-emerald-50 text-emerald-700"; }
+                if (type === "Rehab Mayor") { borderColor = "border-amber-400"; badgeColor = "bg-amber-50 text-amber-700"; }
+                if (type === "Rehab Minor") { borderColor = "border-emerald-500"; badgeColor = "bg-emerald-50 text-emerald-700"; }
                 
                 return (
                 <div key={type}>
