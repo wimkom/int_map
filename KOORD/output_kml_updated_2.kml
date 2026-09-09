@@ -1,0 +1,5226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>output_kml_updated_2.kml</name>
+	<atom:link rel="app" href="https://www.google.com/earth/about/versions/#earth-pro" title="Google Earth Pro 7.3.7.1155"></atom:link>
+	<Style id="lineStyle1">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle10">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle100">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle101">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle102">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle103">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle104">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle105">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle106">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle107">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle108">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle109">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle11">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle110">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle111">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle112">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle113">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle114">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle115">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle116">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle117">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle118">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle119">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle12">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle120">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle121">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle122">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle123">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle124">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle125">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle126">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle127">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle128">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle129">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle13">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle130">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle131">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle132">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle133">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle134">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle135">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle136">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle137">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle138">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle139">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle14">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle140">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle141">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle142">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle143">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle144">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle145">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle146">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle147">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle148">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle149">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle15">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle150">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle151">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle152">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle153">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle154">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle155">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle156">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle157">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle158">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle16">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle17">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle18">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle19">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle2">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle20">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle21">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle22">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle23">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle24">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle25">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle26">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle27">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle28">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle29">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle3">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle30">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle31">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle32">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle33">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle34">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle35">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle36">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle37">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle38">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle39">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle4">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle40">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle41">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle42">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle43">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle44">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle45">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle46">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle47">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle48">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle49">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle5">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle50">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle51">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle52">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle53">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle54">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle55">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle56">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle57">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle58">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle59">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle6">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle60">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle61">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle62">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle63">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle64">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle65">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle66">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle67">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle68">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle69">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle7">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle70">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle71">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle72">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle73">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle74">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle75">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle76">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle77">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle78">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle79">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle8">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle80">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle81">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle82">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle83">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle84">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle85">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle86">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle87">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle88">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle89">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle9">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle90">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle91">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle92">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle93">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle94">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle95">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle96">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle97">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle98">
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle99">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="pointStyle">
+		<IconStyle>
+			<scale>1.1</scale>
+		</IconStyle>
+	</Style>
+	<Placemark>
+		<name>00+000</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.57733298,-2.75722001,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>00+200</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.57563003,-2.75668901,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 00+000 - 00+200 | Tipe: Rehab Mayor | Panjang: 200 m</description>
+		<styleUrl>#lineStyle1</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.57733298,-2.75722001,0 103.57563003,-2.75668901,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>00+200</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.57563003,-2.75668901,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>00+448</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.57342802,-2.75656303,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 00+200 - 00+448 | Tipe: Rehab Minor | Panjang: 248 m</description>
+		<styleUrl>#lineStyle2</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.57563003,-2.75668901,0 103.57342802,-2.75656303,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>00+448</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.57342802,-2.75656303,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>00+795</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.57034398,-2.75644502,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 00+448 - 00+795 | Tipe: Rehab Mayor | Panjang: 347 m</description>
+		<styleUrl>#lineStyle3</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.57342802,-2.75656303,0 103.57034398,-2.75644502,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>02+112</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.55980801,-2.75272002,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>02+206</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.55899799,-2.75289704,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 02+112 - 02+206 | Tipe: Rekonstruksi | Panjang: 94 m</description>
+		<styleUrl>#lineStyle4</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.55980801,-2.75272002,0 103.55899799,-2.75289704,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>02+716</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.55551296,-2.75413999,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>02+861</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.55421896,-2.75428399,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 02+716 - 02+861 | Tipe: Rekonstruksi | Panjang: 145 m</description>
+		<styleUrl>#lineStyle5</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.55551296,-2.75413999,0 103.55421896,-2.75428399,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>02+861</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.55421896,-2.75428399,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>03+317</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.55036496,-2.75350397,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 02+861 - 03+317 | Tipe: Rehab Minor | Panjang: 456 m</description>
+		<styleUrl>#lineStyle6</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.55421896,-2.75428399,0 103.55036496,-2.75350397,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>03+496</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.54911899,-2.75246403,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>03+979</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.54647903,-2.74901404,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 03+496 - 03+979 | Tipe: Rehab Minor | Panjang: 483 m</description>
+		<styleUrl>#lineStyle7</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.54911899,-2.75246403,0 103.54647903,-2.74901404,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>04+172</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.545431,-2.747651,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>04+255</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.54495,-2.747071,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 04+172 - 04+255 | Tipe: Rekonstruksi | Panjang: 83 m</description>
+		<styleUrl>#lineStyle8</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.545431,-2.747651,0 103.54495,-2.747071,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>04+330</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.544348,-2.74638,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>04+420</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.543813,-2.745785,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 04+330 - 04+420 | Tipe: Rekonstruksi | Panjang: 90 m</description>
+		<styleUrl>#lineStyle9</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.544348,-2.74638,0 103.543813,-2.745785,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>04+420</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.543813,-2.745785,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>04+534</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.543192,-2.745115,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 04+420 - 04+534 | Tipe: Rehab Minor | Panjang: 114 m</description>
+		<styleUrl>#lineStyle10</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.543813,-2.745785,0 103.543192,-2.745115,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>04+837</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.541006,-2.743421,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>04+881</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.540803,-2.743361,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 04+837 - 04+881 | Tipe: Rekonstruksi | Panjang: 44 m</description>
+		<styleUrl>#lineStyle11</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.541006,-2.743421,0 103.540803,-2.743361,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>06+075</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.530643,-2.740104,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>06+780</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.525572,-2.736108,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 06+075 - 06+780 | Tipe: Rehab Minor | Panjang: 705 m</description>
+		<styleUrl>#lineStyle12</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.530643,-2.740104,0 103.525572,-2.736108,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>10+920</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.49464903,-2.72149198,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>10+980</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.49414804,-2.721251,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 10+920 - 10+980 | Tipe: Rehab Mayor | Panjang: 60 m</description>
+		<styleUrl>#lineStyle13</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.49464903,-2.72149198,0 103.49414804,-2.721251,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>10+980</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.49414804,-2.721251,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>11+017</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.49384503,-2.72120297,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 10+980 - 11+017 | Tipe: Rekonstruksi | Panjang: 37 m</description>
+		<styleUrl>#lineStyle14</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.49414804,-2.721251,0 103.49384503,-2.72120297,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>11+017</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.49384503,-2.72120297,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>11+125</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.49288899,-2.72088001,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 11+017 - 11+125 | Tipe: Rehab Mayor | Panjang: 108 m</description>
+		<styleUrl>#lineStyle15</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.49384503,-2.72120297,0 103.49288899,-2.72088001,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>12+000</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.48620401,-2.72384704,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>12+100</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.48574703,-2.72464198,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 12+000 - 12+100 | Tipe: Rehab Minor | Panjang: 100 m</description>
+		<styleUrl>#lineStyle16</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.48620401,-2.72384704,0 103.48574703,-2.72464198,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>13+114</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.482578,-2.733135,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>13+243</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.48161,-2.733768,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 13+114 - 13+243 | Tipe: Rehab Minor | Panjang: 129 m</description>
+		<styleUrl>#lineStyle17</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.482578,-2.733135,0 103.48161,-2.733768,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>14+625</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.46971798,-2.732699,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>14+925</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.46785996,-2.73073998,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 14+625 - 14+925 | Tipe: Rehab Mayor | Panjang: 300 m</description>
+		<styleUrl>#lineStyle18</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.46971798,-2.732699,0 103.46785996,-2.73073998,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>16+270</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.45950999,-2.72597797,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>16+345</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.45912602,-2.72653202,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 16+270 - 16+345 | Tipe: Rehab Mayor | Panjang: 75 m</description>
+		<styleUrl>#lineStyle19</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.45950999,-2.72597797,0 103.45912602,-2.72653202,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>16+345</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.45912602,-2.72653202,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>16+400</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.45881304,-2.72692597,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 16+345 - 16+400 | Tipe: Rekonstruksi | Panjang: 55 m</description>
+		<styleUrl>#lineStyle20</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.45912602,-2.72653202,0 103.45881304,-2.72692597,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>16+400</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.45881304,-2.72692597,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>16+489</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.45829998,-2.72751999,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 16+400 - 16+489 | Tipe: Rehab Minor | Panjang: 89 m</description>
+		<styleUrl>#lineStyle21</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.45881304,-2.72692597,0 103.45829998,-2.72751999,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>16+650</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.45715904,-2.72836497,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>16+720</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.45658,-2.72873,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 16+650 - 16+720 | Tipe: Rehab Mayor | Panjang: 70 m</description>
+		<styleUrl>#lineStyle22</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.45715904,-2.72836497,0 103.45658,-2.72873,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>16+720</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.45658,-2.72873,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>16+812</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.455886,-2.729086,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 16+720 - 16+812 | Tipe: Rehab Minor | Panjang: 92 m</description>
+		<styleUrl>#lineStyle23</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.45658,-2.72873,0 103.455886,-2.729086,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>16+812</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.455886,-2.729086,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>17+042</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.45415404,-2.72973298,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 16+812 - 17+042 | Tipe: Rehab Mayor | Panjang: 230 m</description>
+		<styleUrl>#lineStyle24</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.455886,-2.729086,0 103.45415404,-2.72973298,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>19+275</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.43633202,-2.72409196,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>19+382</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.43535402,-2.72408299,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 19+275 - 19+382 | Tipe: Rekonstruksi | Panjang: 107 m</description>
+		<styleUrl>#lineStyle25</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.43633202,-2.72409196,0 103.43535402,-2.72408299,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>19+382</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.43535402,-2.72408299,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>19+581</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.43367001,-2.72352098,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 19+382 - 19+581 | Tipe: Rehab Minor | Panjang: 199 m</description>
+		<styleUrl>#lineStyle26</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.43535402,-2.72408299,0 103.43367001,-2.72352098,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>19+650</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.433093,-2.723377,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>19+825</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.431528,-2.72307,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 19+650 - 19+825 | Tipe: Rehab Minor | Panjang: 175 m</description>
+		<styleUrl>#lineStyle27</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.433093,-2.723377,0 103.431528,-2.72307,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>20+457</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.426142,-2.721624,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>20+564</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.425215,-2.72117,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 20+457 - 20+564 | Tipe: Rehab Mayor | Panjang: 107 m</description>
+		<styleUrl>#lineStyle28</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.426142,-2.721624,0 103.425215,-2.72117,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>21+540</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.418094,-2.724529,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>21+635</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.417912,-2.725367,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 21+540 - 21+635 | Tipe: Rehab Mayor | Panjang: 95 m</description>
+		<styleUrl>#lineStyle29</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.418094,-2.724529,0 103.417912,-2.725367,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>22+462</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.41564104,-2.73233003,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>22+562</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.41545496,-2.73313704,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 22+462 - 22+562 | Tipe: Rehab Minor | Panjang: 100 m</description>
+		<styleUrl>#lineStyle30</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.41564104,-2.73233003,0 103.41545496,-2.73313704,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>22+980</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.41764499,-2.73578396,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>23+077</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.41839701,-2.73621202,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 22+980 - 23+077 | Tipe: Rehab Mayor | Panjang: 97 m</description>
+		<styleUrl>#lineStyle31</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.41764499,-2.73578396,0 103.41839701,-2.73621202,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>23+077</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.41839701,-2.73621202,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>23+185</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.41929404,-2.73663598,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 23+077 - 23+185 | Tipe: Rehab Minor | Panjang: 108 m</description>
+		<styleUrl>#lineStyle32</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.41839701,-2.73621202,0 103.41929404,-2.73663598,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>23+185</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.41929404,-2.73663598,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>23+368</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.42068703,-2.73750803,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 23+185 - 23+368 | Tipe: Rekonstruksi | Panjang: 183 m</description>
+		<styleUrl>#lineStyle33</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.41929404,-2.73663598,0 103.42068703,-2.73750803,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>23+508</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.42167299,-2.73829199,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>23+662</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.42238504,-2.73949899,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 23+508 - 23+662 | Tipe: Rekonstruksi | Panjang: 154 m</description>
+		<styleUrl>#lineStyle34</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.42167299,-2.73829199,0 103.42238504,-2.73949899,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>23+662</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.42238504,-2.73949899,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>23+850</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.42327,-2.74095,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 23+662 - 23+850 | Tipe: Rehab Minor | Panjang: 188 m</description>
+		<styleUrl>#lineStyle35</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.42238504,-2.73949899,0 103.42327,-2.74095,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>23+850</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.42327,-2.74095,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>23+896</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.42339899,-2.74136396,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 23+850 - 23+896 | Tipe: Rehab Mayor | Panjang: 46 m</description>
+		<styleUrl>#lineStyle36</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.42327,-2.74095,0 103.42339899,-2.74136396,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>24+541</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.423526,-2.7472,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>24+652</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.423423,-2.748188,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 24+541 - 24+652 | Tipe: Rehab Minor | Panjang: 111 m</description>
+		<styleUrl>#lineStyle37</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.423526,-2.7472,0 103.423423,-2.748188,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>25+000</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.42333,-2.75131,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>25+076</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.42312,-2.75198,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 25+000 - 25+076 | Tipe: Rehab Minor | Panjang: 76 m</description>
+		<styleUrl>#lineStyle38</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.42333,-2.75131,0 103.42312,-2.75198,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>26+081</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.41940183,-2.76020204,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>26+459</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.41741599,-2.76295097,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 26+081 - 26+459 | Tipe: Rekonstruksi | Panjang: 378 m</description>
+		<styleUrl>#lineStyle39</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.41940183,-2.76020204,0 103.41741599,-2.76295097,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>26+459</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.41741599,-2.76295097,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>26+675</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.415775,-2.763995,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 26+459 - 26+675 | Tipe: Rehab Mayor | Panjang: 216 m</description>
+		<styleUrl>#lineStyle40</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.41741599,-2.76295097,0 103.415775,-2.763995,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>26+995</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.413018,-2.764837,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>27+130</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.411842,-2.765081,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 26+995 - 27+130 | Tipe: Rehab Minor | Panjang: 135 m</description>
+		<styleUrl>#lineStyle41</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.413018,-2.764837,0 103.411842,-2.765081,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>27+308</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.41022901,-2.76526202,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>27+577</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.40804804,-2.764352,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 27+308 - 27+577 | Tipe: Rehab Mayor | Panjang: 269 m</description>
+		<styleUrl>#lineStyle42</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.41022901,-2.76526202,0 103.40804804,-2.764352,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>28+700</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.401094,-2.757449,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>28+991</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.39895602,-2.75600304,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 28+700 - 28+991 | Tipe: Rehab Mayor | Panjang: 291 m</description>
+		<styleUrl>#lineStyle43</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.401094,-2.757449,0 103.39895602,-2.75600304,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>29+820</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.39140099,-2.75715102,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>29+955</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.39088199,-2.75795602,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 29+820 - 29+955 | Tipe: Rehab Minor | Panjang: 135 m</description>
+		<styleUrl>#lineStyle44</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.39140099,-2.75715102,0 103.39088199,-2.75795602,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>30+938</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.394214,-2.765778,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>31+134</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.394964,-2.767567,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 30+938 - 31+134 | Tipe: Rehab Minor | Panjang: 196 m</description>
+		<styleUrl>#lineStyle45</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.394214,-2.765778,0 103.394964,-2.767567,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>31+235</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.39533898,-2.768393,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>31+285</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.39547896,-2.76877899,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 31+235 - 31+285 | Tipe: Rekonstruksi | Panjang: 50 m</description>
+		<styleUrl>#lineStyle46</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.39533898,-2.768393,0 103.39547896,-2.76877899,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>32+555</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.39999898,-2.77865597,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>32+595</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.39972397,-2.77886502,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 32+555 - 32+595 | Tipe: Rekonstruksi | Panjang: 40 m</description>
+		<styleUrl>#lineStyle47</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.39999898,-2.77865597,0 103.39972397,-2.77886502,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>32+595</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.39972397,-2.77886502,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>32+733</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.399019,-2.779837,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 32+595 - 32+733 | Tipe: Rehab Minor | Panjang: 138 m</description>
+		<styleUrl>#lineStyle48</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.39972397,-2.77886502,0 103.399019,-2.779837,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>33+258</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.39557803,-2.78288799,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>33+375</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.39409502,-2.78408904,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 33+258 - 33+375 | Tipe: Rekonstruksi | Panjang: 117 m</description>
+		<styleUrl>#lineStyle49</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.39557803,-2.78288799,0 103.39409502,-2.78408904,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>34+914</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.383003,-2.79085197,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>35+040</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.38192701,-2.79122002,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 34+914 - 35+040 | Tipe: Rekonstruksi | Panjang: 126 m</description>
+		<styleUrl>#lineStyle50</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.383003,-2.79085197,0 103.38192701,-2.79122002,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>35+921</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.37422002,-2.79303303,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>35+966</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.37383999,-2.79313101,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 35+921 - 35+966 | Tipe: Rehab Mayor | Panjang: 45 m</description>
+		<styleUrl>#lineStyle51</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.37422002,-2.79303303,0 103.37383999,-2.79313101,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>39+308</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.35200999,-2.81195903,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>39+403</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.35126702,-2.81238802,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 39+308 - 39+403 | Tipe: Rehab Mayor | Panjang: 95 m</description>
+		<styleUrl>#lineStyle52</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.35200999,-2.81195903,0 103.35126702,-2.81238802,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>39+403</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.35126702,-2.81238802,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>39+437</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.35098304,-2.81252598,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 39+403 - 39+437 | Tipe: Rekonstruksi | Panjang: 34 m</description>
+		<styleUrl>#lineStyle53</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.35126702,-2.81238802,0 103.35098304,-2.81252598,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>41+315</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.33881101,-2.818928,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>41+351</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.33889399,-2.81922899,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 41+315 - 41+351 | Tipe: Rekonstruksi | Panjang: 36 m</description>
+		<styleUrl>#lineStyle54</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.33881101,-2.818928,0 103.33889399,-2.81922899,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>41+351</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.33889399,-2.81922899,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>41+550</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.339397,-2.82099,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 41+351 - 41+550 | Tipe: Rehab Mayor | Panjang: 199 m</description>
+		<styleUrl>#lineStyle55</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.33889399,-2.81922899,0 103.339397,-2.82099,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>41+550</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.339397,-2.82099,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>41+616</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.339587,-2.82155,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 41+550 - 41+616 | Tipe: Rekonstruksi | Panjang: 66 m</description>
+		<styleUrl>#lineStyle56</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.339397,-2.82099,0 103.339587,-2.82155,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>41+616</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.339587,-2.82155,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>41+877</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.340048,-2.82384,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 41+616 - 41+877 | Tipe: Rehab Mayor | Panjang: 261 m</description>
+		<styleUrl>#lineStyle57</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.339587,-2.82155,0 103.340048,-2.82384,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>41+877</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.340048,-2.82384,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>41+925</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.34007299,-2.82419804,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 41+877 - 41+925 | Tipe: Rekonstruksi | Panjang: 48 m</description>
+		<styleUrl>#lineStyle58</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.340048,-2.82384,0 103.34007299,-2.82419804,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>41+925</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.34007299,-2.82419804,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>42+205</name>
+		<description>Ruas 034 | MANGUN JAYA - BTS. KAB. MURA</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.34054497,-2.82669199,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 034 | MANGUN JAYA - BTS. KAB. MURA | Sta: 41+925 - 42+205 | Tipe: Rehab Minor | Panjang: 280 m</description>
+		<styleUrl>#lineStyle59</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.34007299,-2.82419804,0 103.34054497,-2.82669199,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>00+000</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.340568,-2.826777,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>00+163</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.340603,-2.826739,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 00+000 - 00+163 | Tipe: Rehab Minor | Panjang: 163 m</description>
+		<styleUrl>#lineStyle60</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.340568,-2.826777,0 103.340603,-2.826739,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>01+108</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.3382,-2.835617,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>01+800</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.334557,-2.840552,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 01+108 - 01+800 | Tipe: Rehab Mayor | Panjang: 692 m</description>
+		<styleUrl>#lineStyle61</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.3382,-2.835617,0 103.334557,-2.840552,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>01+800</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.334557,-2.840552,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>01+850</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.33431,-2.840992,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 01+800 - 01+850 | Tipe: Rekonstruksi | Panjang: 50 m</description>
+		<styleUrl>#lineStyle62</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.334557,-2.840552,0 103.33431,-2.840992,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>01+850</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.33431,-2.840992,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>02+302</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.331509,-2.843873,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 01+850 - 02+302 | Tipe: Rehab Mayor | Panjang: 452 m</description>
+		<styleUrl>#lineStyle63</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.33431,-2.840992,0 103.331509,-2.843873,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>02+302</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.331509,-2.843873,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>02+402</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.330852,-2.844313,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 02+302 - 02+402 | Tipe: Rehab Minor | Panjang: 100 m</description>
+		<styleUrl>#lineStyle64</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.331509,-2.843873,0 103.330852,-2.844313,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>02+937</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.326631,-2.846483,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>03+016</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.325987,-2.846779,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 02+937 - 03+016 | Tipe: Rehab Mayor | Panjang: 79 m</description>
+		<styleUrl>#lineStyle65</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.326631,-2.846483,0 103.325987,-2.846779,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>03+200</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.32472,-2.847754,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>03+224</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.324608,-2.847939,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 03+200 - 03+224 | Tipe: Rehab Mayor | Panjang: 24 m</description>
+		<styleUrl>#lineStyle66</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.32472,-2.847754,0 103.324608,-2.847939,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>03+224</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.324608,-2.847939,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>03+250</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.324415,-2.848121,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 03+224 - 03+250 | Tipe: Rekonstruksi | Panjang: 26 m</description>
+		<styleUrl>#lineStyle67</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.324608,-2.847939,0 103.324415,-2.848121,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>03+250</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.324415,-2.848121,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>03+400</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.323448,-2.849107,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 03+250 - 03+400 | Tipe: Rehab Mayor | Panjang: 150 m</description>
+		<styleUrl>#lineStyle68</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.324415,-2.848121,0 103.323448,-2.849107,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>03+705</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.321472,-2.850998,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>03+860</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.320554,-2.852047,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 03+705 - 03+860 | Tipe: Rehab Mayor | Panjang: 155 m</description>
+		<styleUrl>#lineStyle69</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.321472,-2.850998,0 103.320554,-2.852047,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>04+145</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.318647,-2.853734,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>04+465</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.316151,-2.855103,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 04+145 - 04+465 | Tipe: Rehab Mayor | Panjang: 320 m</description>
+		<styleUrl>#lineStyle70</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.318647,-2.853734,0 103.316151,-2.855103,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>05+261</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.31348,-2.86099,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>05+335</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.313384,-2.861654,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 05+261 - 05+335 | Tipe: Rehab Mayor | Panjang: 74 m</description>
+		<styleUrl>#lineStyle71</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.31348,-2.86099,0 103.313384,-2.861654,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>05+335</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.313384,-2.861654,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>05+514</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.313516,-2.863252,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 05+335 - 05+514 | Tipe: Rekonstruksi | Panjang: 179 m</description>
+		<styleUrl>#lineStyle72</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.313384,-2.861654,0 103.313516,-2.863252,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>07+421</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.3044204,-2.8734448,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>07+525</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.30373,-2.874069,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 07+421 - 07+525 | Tipe: Rehab Minor | Panjang: 104 m</description>
+		<styleUrl>#lineStyle73</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.3044204,-2.8734448,0 103.30373,-2.874069,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>10+876</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.312111,-2.900058,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>10+947</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.311629,-2.900544,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 10+876 - 10+947 | Tipe: Rekonstruksi | Panjang: 71 m</description>
+		<styleUrl>#lineStyle74</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.312111,-2.900058,0 103.311629,-2.900544,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>10+947</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.311629,-2.900544,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>11+058</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.311214,-2.901424,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 10+947 - 11+058 | Tipe: Rehab Mayor | Panjang: 111 m</description>
+		<styleUrl>#lineStyle75</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.311629,-2.900544,0 103.311214,-2.901424,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>11+058</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.311214,-2.901424,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>11+108</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.311047,-2.901834,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 11+058 - 11+108 | Tipe: Rekonstruksi | Panjang: 50 m</description>
+		<styleUrl>#lineStyle76</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.311214,-2.901424,0 103.311047,-2.901834,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>11+108</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.311047,-2.901834,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>11+173</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.310878,-2.902338,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 11+108 - 11+173 | Tipe: Rehab Mayor | Panjang: 65 m</description>
+		<styleUrl>#lineStyle77</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.311047,-2.901834,0 103.310878,-2.902338,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>14+225</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.314662,-2.917272,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>14+704</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.31042,-2.917762,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 14+225 - 14+704 | Tipe: Rehab Mayor | Panjang: 479 m</description>
+		<styleUrl>#lineStyle78</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.314662,-2.917272,0 103.31042,-2.917762,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>14+704</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.31042,-2.917762,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>14+782</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.309773,-2.917944,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 14+704 - 14+782 | Tipe: Rekonstruksi | Panjang: 78 m</description>
+		<styleUrl>#lineStyle79</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.31042,-2.917762,0 103.309773,-2.917944,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>14+782</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.309773,-2.917944,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>14+822</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.309457,-2.91817,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 14+782 - 14+822 | Tipe: Rehab Mayor | Panjang: 40 m</description>
+		<styleUrl>#lineStyle80</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.309773,-2.917944,0 103.309457,-2.91817,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>17+495</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.304482,-2.940272999999999,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>17+613</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.30397,-2.941179,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 17+495 - 17+613 | Tipe: Rehab Mayor | Panjang: 118 m</description>
+		<styleUrl>#lineStyle81</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.304482,-2.940272999999999,0 103.30397,-2.941179,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>18+889</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.306591,-2.950807,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>19+010</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.306983,-2.951835,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 18+889 - 19+010 | Tipe: Rekonstruksi | Panjang: 121 m</description>
+		<styleUrl>#lineStyle82</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.306591,-2.950807,0 103.306983,-2.951835,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>19+010</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.306983,-2.951835,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>19+110</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.3072265,-2.9525415,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 19+010 - 19+110 | Tipe: Rehab Mayor | Panjang: 100 m</description>
+		<styleUrl>#lineStyle83</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.306983,-2.951835,0 103.3072265,-2.9525415,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>19+330</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.307887,-2.954531,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>19+370</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.307873,-2.954908999999999,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 19+330 - 19+370 | Tipe: Rekonstruksi | Panjang: 40 m</description>
+		<styleUrl>#lineStyle84</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.307887,-2.954531,0 103.307873,-2.954908999999999,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>19+416</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.30788,-2.955317,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>19+456</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.307878,-2.955662,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 19+416 - 19+456 | Tipe: Rekonstruksi | Panjang: 40 m</description>
+		<styleUrl>#lineStyle85</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.30788,-2.955317,0 103.307878,-2.955662,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>20+089</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.307538,-2.96127,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>20+293</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.307191,-2.96305,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 20+089 - 20+293 | Tipe: Rehab Mayor | Panjang: 204 m</description>
+		<styleUrl>#lineStyle86</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.307538,-2.96127,0 103.307191,-2.96305,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>20+293</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.307191,-2.96305,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>20+344</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.307108,-2.963497,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 20+293 - 20+344 | Tipe: Rekonstruksi | Panjang: 51 m</description>
+		<styleUrl>#lineStyle87</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.307191,-2.96305,0 103.307108,-2.963497,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>20+344</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.307108,-2.963497,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>20+585</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.305672,-2.965087,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 20+344 - 20+585 | Tipe: Rehab Mayor | Panjang: 241 m</description>
+		<styleUrl>#lineStyle88</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.307108,-2.963497,0 103.305672,-2.965087,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>23+075</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.286469,-2.968634,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>23+365</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.284077,-2.969632,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 23+075 - 23+365 | Tipe: Rehab Mayor | Panjang: 290 m</description>
+		<styleUrl>#lineStyle89</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.286469,-2.968634,0 103.284077,-2.969632,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>23+964</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.281402,-2.974006,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>24+024</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.281433,-2.974532,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 23+964 - 24+024 | Tipe: Rehab Mayor | Panjang: 60 m</description>
+		<styleUrl>#lineStyle90</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.281402,-2.974006,0 103.281433,-2.974532,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>24+024</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.281433,-2.974532,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>24+066</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.281551,-2.974901,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 24+024 - 24+066 | Tipe: Rekonstruksi | Panjang: 42 m</description>
+		<styleUrl>#lineStyle91</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.281433,-2.974532,0 103.281551,-2.974901,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>24+066</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.281551,-2.974901,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>24+272</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.281827,-2.976749,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 24+066 - 24+272 | Tipe: Rehab Mayor | Panjang: 206 m</description>
+		<styleUrl>#lineStyle92</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.281551,-2.974901,0 103.281827,-2.976749,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>24+272</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.281827,-2.976749,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>24+302</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.281841,-2.977014,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 24+272 - 24+302 | Tipe: Rekonstruksi | Panjang: 30 m</description>
+		<styleUrl>#lineStyle93</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.281827,-2.976749,0 103.281841,-2.977014,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>24+302</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.281841,-2.977014,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>24+451</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.281915,-2.978327,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 24+302 - 24+451 | Tipe: Rehab Mayor | Panjang: 149 m</description>
+		<styleUrl>#lineStyle94</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.281841,-2.977014,0 103.281915,-2.978327,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>24+451</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.281915,-2.978327,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>24+798</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.280588,-2.981033,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 24+451 - 24+798 | Tipe: Rekonstruksi | Panjang: 347 m</description>
+		<styleUrl>#lineStyle95</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.281915,-2.978327,0 103.280588,-2.981033,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>24+798</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.280588,-2.981033,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>24+862</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.28019,-2.981455,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 24+798 - 24+862 | Tipe: Rehab Mayor | Panjang: 64 m</description>
+		<styleUrl>#lineStyle96</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.280588,-2.981033,0 103.28019,-2.981455,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>25+046</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.279489,-2.982961,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>25+150</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.279227,-2.983851,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 25+046 - 25+150 | Tipe: Rehab Mayor | Panjang: 104 m</description>
+		<styleUrl>#lineStyle97</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.279489,-2.982961,0 103.279227,-2.983851,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>25+184</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.279196,-2.984198,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>25+251</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.279132,-2.984746,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 25+184 - 25+251 | Tipe: Rehab Mayor | Panjang: 67 m</description>
+		<styleUrl>#lineStyle98</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.279196,-2.984198,0 103.279132,-2.984746,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>25+251</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.279132,-2.984746,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>25+280</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.279022,-2.985002,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 25+251 - 25+280 | Tipe: Rekonstruksi | Panjang: 29 m</description>
+		<styleUrl>#lineStyle99</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.279132,-2.984746,0 103.279022,-2.985002,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>25+280</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.279022,-2.985002,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>25+317</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.278853,-2.985284,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 25+280 - 25+317 | Tipe: Rehab Minor | Panjang: 37 m</description>
+		<styleUrl>#lineStyle100</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.279022,-2.985002,0 103.278853,-2.985284,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>26+759</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.270692,-2.994159,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>26+850</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.270065,-2.994668,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 26+759 - 26+850 | Tipe: Rehab Mayor | Panjang: 91 m</description>
+		<styleUrl>#lineStyle101</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.270692,-2.994159,0 103.270065,-2.994668,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>26+959</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.269267,-2.995233,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>27+025</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.26876,-2.995513,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 26+959 - 27+025 | Tipe: Rehab Mayor | Panjang: 66 m</description>
+		<styleUrl>#lineStyle102</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.269267,-2.995233,0 103.26876,-2.995513,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>27+189</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.267852,-2.996648,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>27+241</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.267653,-2.997015000000001,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 27+189 - 27+241 | Tipe: Rehab Mayor | Panjang: 52 m</description>
+		<styleUrl>#lineStyle103</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.267852,-2.996648,0 103.267653,-2.997015000000001,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>28+158</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.270855,-3.00194,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>28+282</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.271802,-3.002555,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 28+158 - 28+282 | Tipe: Rekonstruksi | Panjang: 124 m</description>
+		<styleUrl>#lineStyle104</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.270855,-3.00194,0 103.271802,-3.002555,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>28+282</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.271802,-3.002555,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>28+442</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.27246,-3.003938,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 28+282 - 28+442 | Tipe: Rehab Mayor | Panjang: 160 m</description>
+		<styleUrl>#lineStyle105</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.271802,-3.002555,0 103.27246,-3.003938,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>31+500</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.259852,-3.018996,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>31+630</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.258765,-3.018933,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 31+500 - 31+630 | Tipe: Rehab Mayor | Panjang: 130 m</description>
+		<styleUrl>#lineStyle106</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.259852,-3.018996,0 103.258765,-3.018933,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>32+418</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.253207,-3.0218,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>32+483</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.252892,-3.022289,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 32+418 - 32+483 | Tipe: Rekonstruksi | Panjang: 65 m</description>
+		<styleUrl>#lineStyle107</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.253207,-3.0218,0 103.252892,-3.022289,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>33+876</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.257714,-3.032582,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>34+026</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.257147,-3.033812,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 33+876 - 34+026 | Tipe: Rehab Mayor | Panjang: 150 m</description>
+		<styleUrl>#lineStyle108</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.257714,-3.032582,0 103.257147,-3.033812,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>40+620</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.221321,-3.059539,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>41+005</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.223099,-3.062479,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 40+620 - 41+005 | Tipe: Rehab Mayor | Panjang: 385 m</description>
+		<styleUrl>#lineStyle109</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.221321,-3.059539,0 103.223099,-3.062479,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>41+475</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.223275,-3.066733999999999,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>41+825</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.223364,-3.069874,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 41+475 - 41+825 | Tipe: Rehab Minor | Panjang: 350 m</description>
+		<styleUrl>#lineStyle110</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.223275,-3.066733999999999,0 103.223364,-3.069874,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>46+985</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.202506,-3.095403,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>47+045</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.201876,-3.095471,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 46+985 - 47+045 | Tipe: Rekonstruksi | Panjang: 60 m</description>
+		<styleUrl>#lineStyle111</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.202506,-3.095403,0 103.201876,-3.095471,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>47+465</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.197682,-3.095673000000001,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>47+515</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.197262,-3.09559,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 47+465 - 47+515 | Tipe: Rekonstruksi | Panjang: 50 m</description>
+		<styleUrl>#lineStyle112</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.197682,-3.095673000000001,0 103.197262,-3.09559,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>49+292</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.188291,-3.10514,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>49+335</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.18793,-3.105261,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 49+292 - 49+335 | Tipe: Rehab Mayor | Panjang: 43 m</description>
+		<styleUrl>#lineStyle113</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.188291,-3.10514,0 103.18793,-3.105261,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>49+335</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.18793,-3.105261,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>49+510</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.186399,-3.105266,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 49+335 - 49+510 | Tipe: Rekonstruksi | Panjang: 175 m</description>
+		<styleUrl>#lineStyle114</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.18793,-3.105261,0 103.186399,-3.105266,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>49+510</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.186399,-3.105266,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>50+115</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.181188,-3.104433,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 49+510 - 50+115 | Tipe: Rehab Mayor | Panjang: 605 m</description>
+		<styleUrl>#lineStyle115</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.186399,-3.105266,0 103.181188,-3.104433,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>51+800</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.167412,-3.109051,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>52+081</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.16586,-3.110838999999999,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 51+800 - 52+081 | Tipe: Rehab Minor | Panjang: 281 m</description>
+		<styleUrl>#lineStyle116</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.167412,-3.109051,0 103.16586,-3.110838999999999,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>52+119</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.165659,-3.11118,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>52+893</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.161504,-3.116512,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 52+119 - 52+893 | Tipe: Rekonstruksi | Panjang: 774 m</description>
+		<styleUrl>#lineStyle117</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.165659,-3.11118,0 103.161504,-3.116512,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>52+893</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.161504,-3.116512,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>52+945</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.161016,-3.116568,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 52+893 - 52+945 | Tipe: Rehab Minor | Panjang: 52 m</description>
+		<styleUrl>#lineStyle118</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.161504,-3.116512,0 103.161016,-3.116568,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>54+020</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.153669,-3.120069,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>54+065</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.153641,-3.120478,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 54+020 - 54+065 | Tipe: Rekonstruksi | Panjang: 45 m</description>
+		<styleUrl>#lineStyle119</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.153669,-3.120069,0 103.153641,-3.120478,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>54+420</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.153696,-3.123561,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>54+495</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.153597,-3.124231,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 54+420 - 54+495 | Tipe: Rekonstruksi | Panjang: 75 m</description>
+		<styleUrl>#lineStyle120</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.153696,-3.123561,0 103.153597,-3.124231,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>55+900</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.143797,-3.128415,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>56+080</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.142387,-3.127846,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 55+900 - 56+080 | Tipe: Rehab Mayor | Panjang: 180 m</description>
+		<styleUrl>#lineStyle121</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.143797,-3.128415,0 103.142387,-3.127846,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>56+080</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.142387,-3.127846,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>56+175</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.141653,-3.128239999999999,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 56+080 - 56+175 | Tipe: Rekonstruksi | Panjang: 95 m</description>
+		<styleUrl>#lineStyle122</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.142387,-3.127846,0 103.141653,-3.128239999999999,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>56+190</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.141537,-3.128323,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>56+265</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.14112,-3.128865999999999,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 56+190 - 56+265 | Tipe: Rehab Mayor | Panjang: 75 m</description>
+		<styleUrl>#lineStyle123</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.141537,-3.128323,0 103.14112,-3.128865999999999,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>61+475</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.104765,-3.144512000000001,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>62+115</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.104749,-3.150143,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 61+475 - 62+115 | Tipe: Rehab Minor | Panjang: 640 m</description>
+		<styleUrl>#lineStyle124</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.104765,-3.144512000000001,0 103.104749,-3.150143,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>63+225</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.107416,-3.159506,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>63+325</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.107752,-3.160347,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 63+225 - 63+325 | Tipe: Rehab Minor | Panjang: 100 m</description>
+		<styleUrl>#lineStyle125</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.107416,-3.159506,0 103.107752,-3.160347,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>63+325</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.107752,-3.160347,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>63+375</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.1079,-3.160664,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 63+325 - 63+375 | Tipe: Rehab Mayor | Panjang: 50 m</description>
+		<styleUrl>#lineStyle126</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.107752,-3.160347,0 103.1079,-3.160664,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>63+525</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.109297,-3.161063,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>63+676</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.109989,-3.162153,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 63+525 - 63+676 | Tipe: Rehab Minor | Panjang: 151 m</description>
+		<styleUrl>#lineStyle127</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.109297,-3.161063,0 103.109989,-3.162153,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>64+500</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.108484,-3.168693,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>64+675</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.107127,-3.169439,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 64+500 - 64+675 | Tipe: Rehab Mayor | Panjang: 175 m</description>
+		<styleUrl>#lineStyle128</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.108484,-3.168693,0 103.107127,-3.169439,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>64+945</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.104825,-3.170017000000001,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>65+020</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.104248,-3.170341000000001,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 64+945 - 65+020 | Tipe: Rekonstruksi | Panjang: 75 m</description>
+		<styleUrl>#lineStyle129</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.104825,-3.170017000000001,0 103.104248,-3.170341000000001,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>66+910</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.087926,-3.171904,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>67+200</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.085505,-3.172739,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 66+910 - 67+200 | Tipe: Rehab Minor | Panjang: 290 m</description>
+		<styleUrl>#lineStyle130</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.087926,-3.171904,0 103.085505,-3.172739,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>67+232</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.08534,-3.172955,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>67+800</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.081705,-3.176494,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 67+232 - 67+800 | Tipe: Rehab Minor | Panjang: 568 m</description>
+		<styleUrl>#lineStyle131</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.08534,-3.172955,0 103.081705,-3.176494,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>68+225</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.082359,-3.180152999999999,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>68+325</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.082299,-3.181019,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 68+225 - 68+325 | Tipe: Rehab Minor | Panjang: 100 m</description>
+		<styleUrl>#lineStyle132</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.082359,-3.180152999999999,0 103.082299,-3.181019,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>68+500</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.081781,-3.182553,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>68+625</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.081011,-3.183319,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 68+500 - 68+625 | Tipe: Rehab Minor | Panjang: 125 m</description>
+		<styleUrl>#lineStyle133</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.081781,-3.182553,0 103.081011,-3.183319,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>68+625</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.081011,-3.183319,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>68+725</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.080314,-3.183819,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 68+625 - 68+725 | Tipe: Rehab Mayor | Panjang: 100 m</description>
+		<styleUrl>#lineStyle134</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.081011,-3.183319,0 103.080314,-3.183819,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>68+725</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.080314,-3.183819,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>68+795</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.08006,-3.184438,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 68+725 - 68+795 | Tipe: Rehab Minor | Panjang: 70 m</description>
+		<styleUrl>#lineStyle135</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.080314,-3.183819,0 103.08006,-3.184438,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>68+795</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.08006,-3.184438,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>68+815</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.080006,-3.18461,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 68+795 - 68+815 | Tipe: Rekonstruksi | Panjang: 20 m</description>
+		<styleUrl>#lineStyle136</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.08006,-3.184438,0 103.080006,-3.18461,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>69+445</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.080048,-3.189738,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>69+613</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.07887,-3.190641,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 69+445 - 69+613 | Tipe: Rekonstruksi | Panjang: 168 m</description>
+		<styleUrl>#lineStyle137</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.080048,-3.189738,0 103.07887,-3.190641,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>69+613</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.07887,-3.190641,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>69+663</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.078587,-3.190937,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 69+613 - 69+663 | Tipe: Rehab Mayor | Panjang: 50 m</description>
+		<styleUrl>#lineStyle138</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.07887,-3.190641,0 103.078587,-3.190937,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>69+663</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.078587,-3.190937,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>69+762</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.078065,-3.191611,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 69+663 - 69+762 | Tipe: Rehab Minor | Panjang: 99 m</description>
+		<styleUrl>#lineStyle139</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.078587,-3.190937,0 103.078065,-3.191611,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>69+762</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.078065,-3.191611,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>69+812</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.077792,-3.192055,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 69+762 - 69+812 | Tipe: Rehab Mayor | Panjang: 50 m</description>
+		<styleUrl>#lineStyle140</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.078065,-3.191611,0 103.077792,-3.192055,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>69+836</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.077613,-3.192231,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>70+000</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.077424,-3.192405,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 69+836 - 70+000 | Tipe: Rehab Mayor | Panjang: 164 m</description>
+		<styleUrl>#lineStyle141</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.077613,-3.192231,0 103.077424,-3.192405,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>70+000</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.077424,-3.192405,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>70+125</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.076002,-3.194116,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 70+000 - 70+125 | Tipe: Rehab Minor | Panjang: 125 m</description>
+		<styleUrl>#lineStyle142</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.077424,-3.192405,0 103.076002,-3.194116,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>70+125</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.076002,-3.194116,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>70+537</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.073937,-3.197152,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 70+125 - 70+537 | Tipe: Rehab Mayor | Panjang: 412 m</description>
+		<styleUrl>#lineStyle143</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.076002,-3.194116,0 103.073937,-3.197152,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>70+537</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.073937,-3.197152,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>70+650</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.073071,-3.197665000000001,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 70+537 - 70+650 | Tipe: Rekonstruksi | Panjang: 113 m</description>
+		<styleUrl>#lineStyle144</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.073937,-3.197152,0 103.073071,-3.197665000000001,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>70+650</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.073071,-3.197665000000001,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>70+790</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.072404,-3.19871,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 70+650 - 70+790 | Tipe: Rehab Mayor | Panjang: 140 m</description>
+		<styleUrl>#lineStyle145</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.073071,-3.197665000000001,0 103.072404,-3.19871,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>70+790</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.072404,-3.19871,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>70+850</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.072223,-3.199143,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 70+790 - 70+850 | Tipe: Rekonstruksi | Panjang: 60 m</description>
+		<styleUrl>#lineStyle146</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.072404,-3.19871,0 103.072223,-3.199143,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>70+850</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.072223,-3.199143,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>71+150</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.072676,-3.201692,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 70+850 - 71+150 | Tipe: Rehab Mayor | Panjang: 300 m</description>
+		<styleUrl>#lineStyle147</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.072223,-3.199143,0 103.072676,-3.201692,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>71+150</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.072676,-3.201692,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>71+200</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.072999,-3.202014999999999,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rekonstruksi</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 71+150 - 71+200 | Tipe: Rekonstruksi | Panjang: 50 m</description>
+		<styleUrl>#lineStyle148</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.072676,-3.201692,0 103.072999,-3.202014999999999,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>71+200</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.072999,-3.202014999999999,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>71+250</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.073342,-3.20232,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 71+200 - 71+250 | Tipe: Rehab Mayor | Panjang: 50 m</description>
+		<styleUrl>#lineStyle149</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.072999,-3.202014999999999,0 103.073342,-3.20232,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>71+250</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.073342,-3.20232,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>71+350</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.07381,-3.202874,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 71+250 - 71+350 | Tipe: Rehab Minor | Panjang: 100 m</description>
+		<styleUrl>#lineStyle150</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.073342,-3.20232,0 103.07381,-3.202874,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>71+350</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.07381,-3.202874,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>72+011</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.073318,-3.206558,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 71+350 - 72+011 | Tipe: Rehab Mayor | Panjang: 661 m</description>
+		<styleUrl>#lineStyle151</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.07381,-3.202874,0 103.073318,-3.206558,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>72+038</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.072387,-3.208141,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>72+166</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.071552,-3.208899999999999,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 72+038 - 72+166 | Tipe: Rehab Mayor | Panjang: 128 m</description>
+		<styleUrl>#lineStyle152</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.072387,-3.208141,0 103.071552,-3.208899999999999,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>74+053</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.060521,-3.218526000000001,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>74+103</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.060298,-3.218915,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 74+053 - 74+103 | Tipe: Rehab Mayor | Panjang: 50 m</description>
+		<styleUrl>#lineStyle153</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.060521,-3.218526000000001,0 103.060298,-3.218915,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>75+146</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.057024,-3.227278000000001,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>75+360</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.055901,-3.228727,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 75+146 - 75+360 | Tipe: Rehab Minor | Panjang: 214 m</description>
+		<styleUrl>#lineStyle154</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.057024,-3.227278000000001,0 103.055901,-3.228727,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>75+500</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.054742,-3.229199,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>75+700</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.053306,-3.230068,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 75+500 - 75+700 | Tipe: Rehab Minor | Panjang: 200 m</description>
+		<styleUrl>#lineStyle155</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.054742,-3.229199,0 103.053306,-3.230068,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>75+949</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.052485,-3.232120000000001,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>76+294</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.050383,-3.23437,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 75+949 - 76+294 | Tipe: Rehab Minor | Panjang: 345 m</description>
+		<styleUrl>#lineStyle156</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.052485,-3.232120000000001,0 103.050383,-3.23437,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>76+335</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.05008,-3.234563,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>76+385</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.049655,-3.234685,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Minor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 76+335 - 76+385 | Tipe: Rehab Minor | Panjang: 50 m</description>
+		<styleUrl>#lineStyle157</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.05008,-3.234563,0 103.049655,-3.234685,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>77+318</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.043768,-3.239813,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>77+518</name>
+		<description>Ruas 035 | BTS. KAB. MUBA - MUARA BELITI</description>
+		<styleUrl>#pointStyle</styleUrl>
+		<Point>
+			<coordinates>103.041966,-3.239605,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Rehab Mayor</name>
+		<description>Ruas: 035 | BTS. KAB. MUBA - MUARA BELITI | Sta: 77+318 - 77+518 | Tipe: Rehab Mayor | Panjang: 200 m</description>
+		<styleUrl>#lineStyle158</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				103.043768,-3.239813,0 103.041966,-3.239605,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+</Document>
+</kml>
