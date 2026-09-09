@@ -84,19 +84,20 @@ export default function Sidebar({
             { id: 'dashboard', icon: PieChart, label: 'Dash' },
             { id: 'list', icon: List, label: 'Daftar' },
             { id: 'search', icon: Search, label: 'Cari' },
+            { id: 'report', icon: PlusCircle, label: 'Laporan' },
             { id: 'settings', icon: Settings, label: 'Sistem' }
           ].map(tab => (
             <button 
               key={tab.id}
               onClick={() => setActiveTab(tab.id)} 
-              className={`flex-1 flex items-center justify-center py-2 px-3 rounded-lg text-xs font-bold transition-all duration-200 ${
+              className={`flex-1 flex items-center justify-center py-2 px-2 md:px-3 rounded-lg text-[10px] md:text-xs font-bold transition-all duration-200 ${
                 activeTab === tab.id 
                   ? 'bg-white text-blue-700 shadow-sm ring-1 ring-slate-200/50' 
                   : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'
               }`}
             >
-              <tab.icon size={14} className="mr-1.5" />
-              {tab.label}
+              <tab.icon size={14} className="md:mr-1.5 mb-1 md:mb-0 block md:inline" />
+              <span className="hidden md:inline">{tab.label}</span>
             </button>
           ))}
         </div>
@@ -218,10 +219,60 @@ export default function Sidebar({
           </div>
         )}
 
+        {/* REPORT TAB */}
+        {activeTab === "report" && (
+          <div className="animate-in fade-in duration-300">
+            {/* Field Input Concept */}
+            <div className="bg-gradient-to-b from-blue-600 to-blue-800 p-5 rounded-2xl shadow-lg text-white mb-6">
+              <div className="flex items-center mb-3">
+                <PlusCircle size={20} className="text-blue-200 mr-2" />
+                <h2 className="text-sm font-black uppercase tracking-widest">Laporan Lapangan</h2>
+              </div>
+              <p className="text-[11px] font-medium text-blue-100 mb-5 leading-relaxed">Pembaruan progres atau pelaporan kerusakan jalan langsung dari titik lokasi.</p>
+              
+              <div className="space-y-3 bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/20">
+                <div className="flex gap-3">
+                  <div className="flex-1">
+                    <label className="text-[10px] font-bold text-blue-200 mb-1.5 block uppercase">STA Awal</label>
+                    <input type="text" placeholder="120+200" className="w-full px-3 py-2.5 bg-white/90 rounded-lg text-xs font-bold text-slate-800 placeholder-slate-400 focus:outline-none" />
+                  </div>
+                  <div className="flex-1">
+                    <label className="text-[10px] font-bold text-blue-200 mb-1.5 block uppercase">STA Akhir</label>
+                    <input type="text" placeholder="120+400" className="w-full px-3 py-2.5 bg-white/90 rounded-lg text-xs font-bold text-slate-800 placeholder-slate-400 focus:outline-none" />
+                  </div>
+                </div>
+                
+                <div>
+                  <label className="text-[10px] font-bold text-blue-200 mb-1.5 block uppercase">Jenis Laporan</label>
+                  <select className="w-full px-3 py-2.5 bg-white/90 rounded-lg text-xs font-bold text-slate-800 focus:outline-none appearance-none">
+                    <option>Progres Pengaspalan</option>
+                    <option>Laporan Lubang (Pothole)</option>
+                    <option>Pekerjaan Pemeliharaan Rutin</option>
+                    <option>Kendala Cuaca / Lapangan</option>
+                  </select>
+                </div>
+
+                <div className="border-2 border-dashed border-blue-300/50 p-4 mt-2 text-center text-xs font-bold text-white rounded-xl bg-white/5 hover:bg-white/10 cursor-pointer transition-colors flex flex-col items-center justify-center gap-2">
+                  <Camera size={20} className="opacity-70" />
+                  Ambil Foto Kondisi
+                </div>
+
+                <button className="w-full bg-white text-blue-700 text-sm py-3 rounded-xl font-black shadow-lg hover:bg-slate-50 transition-colors mt-3">
+                  Kirim Laporan
+                </button>
+              </div>
+            </div>
+            
+            <div className="flex items-start p-4 bg-slate-100 rounded-2xl border border-slate-200">
+              <Info size={16} className="text-slate-500 mr-2 shrink-0 mt-0.5" />
+              <p className="text-[11px] font-medium text-slate-600 leading-relaxed">Laporan akan otomatis disinkronkan ke database pusat dan muncul sebagai titik baru di peta (Fitur segera hadir).</p>
+            </div>
+          </div>
+        )}
+
         {/* SETTINGS TAB */}
         {activeTab === "settings" && (
           <div className="animate-in fade-in duration-300">
-            
             {/* Database Card */}
             <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm mb-6">
               <div className="flex items-center mb-4">
@@ -240,47 +291,6 @@ export default function Sidebar({
                 <option value="db3">M. Beliti - Lubuklinggau (Contoh)</option>
               </select>
             </div>
-
-            {/* Field Input Concept */}
-            <div className="bg-gradient-to-b from-blue-600 to-blue-800 p-5 rounded-2xl shadow-lg text-white">
-              <div className="flex items-center mb-3">
-                <PlusCircle size={20} className="text-blue-200 mr-2" />
-                <h2 className="text-sm font-black uppercase tracking-widest">Laporan Lapangan</h2>
-              </div>
-              <p className="text-[11px] font-medium text-blue-100 mb-5 leading-relaxed">Pembaruan progres atau laporan kerusakan jalan langsung dari titik lokasi (Fitur Masa Depan).</p>
-              
-              <div className="space-y-3 bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/20">
-                <div className="flex gap-3">
-                  <div className="flex-1">
-                    <label className="text-[10px] font-bold text-blue-200 mb-1.5 block uppercase">STA Awal</label>
-                    <input type="text" placeholder="120+200" className="w-full px-3 py-2.5 bg-white/90 rounded-lg text-xs font-bold text-slate-800 placeholder-slate-400 focus:outline-none" />
-                  </div>
-                  <div className="flex-1">
-                    <label className="text-[10px] font-bold text-blue-200 mb-1.5 block uppercase">STA Akhir</label>
-                    <input type="text" placeholder="120+400" className="w-full px-3 py-2.5 bg-white/90 rounded-lg text-xs font-bold text-slate-800 placeholder-slate-400 focus:outline-none" />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="text-[10px] font-bold text-blue-200 mb-1.5 block uppercase">Jenis Laporan</label>
-                  <select className="w-full px-3 py-2.5 bg-white/90 rounded-lg text-xs font-bold text-slate-800 focus:outline-none appearance-none">
-                    <option>Progres Aspal</option>
-                    <option>Laporan Lubang (Pothole)</option>
-                    <option>Pemeliharaan Rutin</option>
-                  </select>
-                </div>
-
-                <div className="border-2 border-dashed border-blue-300/50 p-4 mt-2 text-center text-xs font-bold text-white rounded-xl bg-white/5 hover:bg-white/10 cursor-pointer transition-colors flex flex-col items-center justify-center gap-2">
-                  <Camera size={20} className="opacity-70" />
-                  Ambil Foto Kondisi
-                </div>
-
-                <button className="w-full bg-white text-blue-700 text-sm py-3 rounded-xl font-black shadow-lg hover:bg-slate-50 transition-colors mt-3">
-                  Kirim Laporan
-                </button>
-              </div>
-            </div>
-            
           </div>
         )}
       </div>
