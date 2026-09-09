@@ -1,15 +1,38 @@
-import { MapPin, Activity, CheckCircle, Clock, Search, Navigation, List, Settings, Database, PlusCircle, Filter, PieChart, Info, Camera } from "lucide-react";
-import { useState } from "react";
+import { MapPin, Activity, CheckCircle, Clock, Search, Navigation, List, Settings, Database, PlusCircle, Filter, PieChart, Info, Camera, Route } from "lucide-react";
+import { useState, useMemo } from "react";
+
+function getDistanceInMeters(lat1: number, lon1: number, lat2: number, lon2: number) {
+  const R = 6371e3;
+  const φ1 = lat1 * Math.PI/180;
+  const φ2 = lat2 * Math.PI/180;
+  const Δφ = (lat2-lat1) * Math.PI/180;
+  const Δλ = (lon2-lon1) * Math.PI/180;
+  const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) + Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ/2) * Math.sin(Δλ/2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  return R * c;
+}
+
+function calculateFeatureLength(feature: any) {
+  if (feature.geometry.type !== 'LineString') return 0;
+  let totalLength = 0;
+  const coords = feature.geometry.coordinates;
+  for (let i = 0; i < coords.length - 1; i++) {
+    totalLength += getDistanceInMeters(coords[i][1], coords[i][0], coords[i+1][1], coords[i+1][0]);
+  }
+  return totalLength;
+}
 
 export default function Sidebar({ 
   onSearchCoord, 
   roadGeoJson, 
+  baseRoad,
   onFeatureClick,
   activeDatabase,
   setActiveDatabase
 }: { 
   onSearchCoord: (coord: [number, number]) => void,
   roadGeoJson: any,
+  baseRoad: any,
   onFeatureClick: (coord: [number, number]) => void,
   activeDatabase: string,
   setActiveDatabase: (db: string) => void
@@ -22,6 +45,14 @@ export default function Sidebar({
   const handlings = roadGeoJson ? roadGeoJson.features.filter((f: any) => f.geometry.type === 'LineString') : [];
   
   const groupedHandlings: Record<string, any[]> = {};
+  const lengthStats: Record<string, number> = {
+    "Total Penanganan": 0,
+    "Rekonstruksi": 0,
+    "Rehab Mayor": 0,
+    "Rehab Minor": 0,
+    "Pemeliharaan Rutin / Lainnya": 0
+  };
+
   handlings.forEach((h: any) => {
     let type = "Lainnya";
     const color = h.properties.stroke;
@@ -32,7 +63,20 @@ export default function Sidebar({
 
     if (!groupedHandlings[type]) groupedHandlings[type] = [];
     groupedHandlings[type].push(h);
+
+    const len = calculateFeatureLength(h);
+    lengthStats[type] += len;
+    lengthStats["Total Penanganan"] += len;
   });
+
+  const totalBaseRoadLength = useMemo(() => {
+    if (!baseRoad) return 0;
+    let len = 0;
+    baseRoad.features.forEach((f: any) => {
+      len += calculateFeatureLength(f);
+    });
+    return len;
+  }, [baseRoad]);
 
   const handleSearch = () => {
     const lat = parseFloat(latInput);
@@ -55,14 +99,17 @@ export default function Sidebar({
   const availableTypes = ["Semua", ...Object.keys(groupedHandlings)];
   const displayedTypes = listFilter === "Semua" ? Object.keys(groupedHandlings) : [listFilter];
 
-  const StatCard = ({ title, count, colorClass, icon: Icon }: any) => (
-    <div className={`bg-white p-4 rounded-2xl border shadow-sm flex items-center justify-between transition-all hover:shadow-md ${colorClass}`}>
-      <div>
-        <p className="text-3xl font-black">{count}</p>
-        <p className="text-[10px] font-bold uppercase tracking-wider mt-1 opacity-80">{title}</p>
+  const StatCard = ({ title, count, subtitle, colorClass, icon: Icon }: any) => (
+    <div className={`bg-white p-4 rounded-2xl border shadow-sm transition-all hover:shadow-md ${colorClass}`}>
+      <div className="flex justify-between items-start mb-2">
+        <div className="p-2.5 rounded-xl bg-current opacity-20">
+          <Icon size={20} className="text-current" style={{ opacity: 1 }} />
+        </div>
+        <p className="text-2xl font-black">{count}</p>
       </div>
-      <div className="p-3 rounded-full bg-current opacity-10">
-        <Icon size={24} className="text-current" style={{ opacity: 1 }} />
+      <div>
+        <p className="text-[10px] font-bold uppercase tracking-wider opacity-80">{title}</p>
+        {subtitle && <p className="text-[10px] font-semibold opacity-60 mt-0.5">{subtitle}</p>}
       </div>
     </div>
   );
@@ -71,14 +118,14 @@ export default function Sidebar({
     <div className="w-full h-full bg-slate-50 border-r border-slate-200 flex flex-col shadow-2xl relative">
       
       {/* Header */}
-      <div className="p-5 bg-slate-900 text-white relative overflow-hidden hidden md:block">
+      <div className="p-5 bg-slate-900 text-white relative overflow-hidden hidden md:block shrink-0">
         <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500 rounded-full blur-[60px] opacity-20 -mr-10 -mt-10"></div>
         <h1 className="text-2xl font-black tracking-tight">SI-MANTAP <span className="text-blue-400">1.4</span></h1>
         <p className="text-xs font-semibold text-slate-400 mt-1 uppercase tracking-widest">PPK 1.4 BBPJN Sumsel</p>
       </div>
 
       {/* Modern Pill Tabs */}
-      <div className="px-4 pt-4 pb-2 bg-white md:bg-slate-50">
+      <div className="px-4 pt-4 pb-2 bg-white md:bg-slate-50 shrink-0">
         <div className="flex bg-slate-100 p-1.5 rounded-xl shadow-inner overflow-x-auto no-scrollbar">
           {[
             { id: 'dashboard', icon: PieChart, label: 'Dash' },
@@ -96,7 +143,7 @@ export default function Sidebar({
                   : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'
               }`}
             >
-              <tab.icon size={14} className="md:mr-1.5 mb-1 md:mb-0 block md:inline" />
+              <tab.icon size={14} className="md:mr-1.5 mb-1 md:mb-0 block md:inline mx-auto" />
               <span className="hidden md:inline">{tab.label}</span>
             </button>
           ))}
@@ -109,12 +156,51 @@ export default function Sidebar({
         {/* DASHBOARD TAB */}
         {activeTab === "dashboard" && (
           <div className="animate-in fade-in duration-300">
-            <h2 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-3">Ringkasan Proyek</h2>
+            
+            {/* Main Road Length Card */}
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-700 p-5 rounded-2xl shadow-md text-white mb-6 relative overflow-hidden">
+              <Route className="absolute right-[-20px] bottom-[-20px] w-32 h-32 text-white opacity-10" />
+              <h2 className="text-[10px] font-bold uppercase tracking-widest text-blue-200 mb-1">Panjang Total Ruas Jalan</h2>
+              <div className="flex items-baseline gap-1">
+                <span className="text-4xl font-black tracking-tight">{(totalBaseRoadLength / 1000).toFixed(2)}</span>
+                <span className="text-lg font-bold text-blue-200">KM</span>
+              </div>
+              <div className="mt-3 pt-3 border-t border-white/20 flex justify-between items-center text-xs">
+                <span className="font-medium text-blue-100">Sedang ditangani:</span>
+                <span className="font-bold bg-white/20 px-2 py-0.5 rounded-full">{(lengthStats["Total Penanganan"] / 1000).toFixed(2)} KM ({(lengthStats["Total Penanganan"] / totalBaseRoadLength * 100).toFixed(1)}%)</span>
+              </div>
+            </div>
+
+            <h2 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-3">Rincian Penanganan</h2>
             <div className="grid grid-cols-2 gap-3 mb-8">
-              <StatCard title="Total" count={handlings.length} colorClass="text-blue-600 border-blue-100" icon={Activity} />
-              <StatCard title="Rekonstruksi" count={groupedHandlings["Rekonstruksi"]?.length || 0} colorClass="text-red-600 border-red-100" icon={MapPin} />
-              <StatCard title="Rehab Mayor" count={groupedHandlings["Rehab Mayor"]?.length || 0} colorClass="text-amber-500 border-amber-100" icon={CheckCircle} />
-              <StatCard title="Rehab Minor" count={groupedHandlings["Rehab Minor"]?.length || 0} colorClass="text-emerald-600 border-emerald-100" icon={Clock} />
+              <StatCard 
+                title="Rekonstruksi" 
+                count={`${(lengthStats["Rekonstruksi"] / 1000).toFixed(2)} KM`} 
+                subtitle={`${groupedHandlings["Rekonstruksi"]?.length || 0} Lokasi`}
+                colorClass="text-red-600 border-red-100" 
+                icon={MapPin} 
+              />
+              <StatCard 
+                title="Rehab Mayor" 
+                count={`${(lengthStats["Rehab Mayor"] / 1000).toFixed(2)} KM`} 
+                subtitle={`${groupedHandlings["Rehab Mayor"]?.length || 0} Lokasi`}
+                colorClass="text-amber-500 border-amber-100" 
+                icon={CheckCircle} 
+              />
+              <StatCard 
+                title="Rehab Minor" 
+                count={`${(lengthStats["Rehab Minor"] / 1000).toFixed(2)} KM`} 
+                subtitle={`${groupedHandlings["Rehab Minor"]?.length || 0} Lokasi`}
+                colorClass="text-emerald-600 border-emerald-100" 
+                icon={Activity} 
+              />
+              <StatCard 
+                title="Lainnya" 
+                count={`${(lengthStats["Pemeliharaan Rutin / Lainnya"] / 1000).toFixed(2)} KM`} 
+                subtitle={`${groupedHandlings["Pemeliharaan Rutin / Lainnya"]?.length || 0} Lokasi`}
+                colorClass="text-blue-600 border-blue-100" 
+                icon={Clock} 
+              />
             </div>
 
             <h2 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-3">Legenda Warna</h2>
@@ -122,7 +208,7 @@ export default function Sidebar({
               <div className="flex items-center text-sm font-semibold text-slate-700"><div className="w-4 h-4 rounded-full bg-[#ff0000] mr-3 shadow-sm ring-2 ring-red-100"></div> Rekonstruksi</div>
               <div className="flex items-center text-sm font-semibold text-slate-700"><div className="w-4 h-4 rounded-full bg-[#ffff00] mr-3 shadow-sm ring-2 ring-yellow-100"></div> Rehab Mayor</div>
               <div className="flex items-center text-sm font-semibold text-slate-700"><div className="w-4 h-4 rounded-full bg-[#00ff00] mr-3 shadow-sm ring-2 ring-green-100"></div> Rehab Minor</div>
-              <div className="flex items-center text-sm font-semibold text-slate-700"><div className="w-4 h-4 rounded-full bg-[#0000ff] mr-3 shadow-sm ring-2 ring-blue-100"></div> Pemeliharaan Rutin / Lainnya</div>
+              <div className="flex items-center text-sm font-semibold text-slate-700"><div className="w-4 h-4 rounded-full bg-[#0000ff] mr-3 shadow-sm ring-2 ring-blue-100"></div> Rutin / Lainnya</div>
               <div className="flex items-center text-xs font-semibold text-slate-400 mt-3 pt-3 border-t border-slate-100"><div className="w-4 h-4 rounded-full bg-slate-400 mr-3 opacity-50 border-2 border-dashed border-slate-600"></div> Ruas Jalan Dasar (Panduan)</div>
             </div>
           </div>
@@ -165,16 +251,21 @@ export default function Sidebar({
                     </span>
                   </div>
                   <div className="space-y-2.5">
-                    {groupedHandlings[type]?.map((h: any, idx: number) => (
+                    {groupedHandlings[type]?.map((h: any, idx: number) => {
+                      const len = calculateFeatureLength(h);
+                      return (
                       <div 
                         key={idx} 
                         onClick={() => handleFeatureClick(h)}
                         className={`bg-white p-3.5 border-l-4 ${borderColor} border-y border-r border-slate-200 rounded-xl cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all group`}
                       >
-                        <p className="font-bold text-slate-800 text-sm group-hover:text-blue-600 transition-colors">{h.properties.name}</p>
-                        <p className="text-xs font-medium text-slate-500 mt-1.5 leading-relaxed bg-slate-50 p-2 rounded-lg">{h.properties.description || 'Tidak ada deskripsi'}</p>
+                        <div className="flex justify-between items-start">
+                          <p className="font-bold text-slate-800 text-sm group-hover:text-blue-600 transition-colors flex-1">{h.properties.name}</p>
+                          <span className="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-1 rounded-md ml-2 shrink-0">{(len).toFixed(0)} meter</span>
+                        </div>
+                        <p className="text-xs font-medium text-slate-500 mt-2 leading-relaxed bg-slate-50 p-2 rounded-lg border border-slate-100">{h.properties.description || 'Tidak ada deskripsi'}</p>
                       </div>
-                    ))}
+                    )})}
                     {(!groupedHandlings[type] || groupedHandlings[type].length === 0) && (
                       <div className="p-4 border border-dashed border-slate-300 rounded-xl text-center">
                         <p className="text-xs font-medium text-slate-400">Tidak ada data penanganan.</p>

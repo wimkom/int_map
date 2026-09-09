@@ -65,6 +65,7 @@ export default function Home() {
             if (window.innerWidth < 768) setIsMobileSidebarOpen(false);
           }} 
           roadGeoJson={roadGeoJson}
+          baseRoad={baseRoad}
           onFeatureClick={(coord) => {
             setFocusedFeatureCoord(coord);
             if (window.innerWidth < 768) setIsMobileSidebarOpen(false);
