@@ -99,20 +99,24 @@ export default function Sidebar({
   const availableTypes = ["Semua", ...Object.keys(groupedHandlings)];
   const displayedTypes = listFilter === "Semua" ? Object.keys(groupedHandlings) : [listFilter];
 
-  const StatCard = ({ title, count, subtitle, colorClass, icon: Icon }: any) => (
-    <div className={`bg-white p-4 rounded-2xl border shadow-sm transition-all hover:shadow-md ${colorClass}`}>
-      <div className="flex justify-between items-start mb-2">
-        <div className="p-2.5 rounded-xl bg-current opacity-20">
-          <Icon size={20} className="text-current" style={{ opacity: 1 }} />
+  const StatCard = ({ title, count, subtitle, colorClass, icon: Icon }: any) => {
+    const [num, unit] = count.toString().split(' ');
+    return (
+      <div className={`bg-white p-3.5 rounded-2xl border shadow-sm transition-all hover:shadow-md flex flex-col ${colorClass}`}>
+        <div className="flex justify-between items-start mb-2">
+          <p className="text-[10px] font-black uppercase tracking-wider opacity-80 leading-tight pr-2">{title}</p>
+          <div className="p-1.5 rounded-lg bg-current opacity-20 shrink-0">
+            <Icon size={14} className="text-current" style={{ opacity: 1 }} />
+          </div>
         </div>
-        <p className="text-2xl font-black">{count}</p>
+        <div className="flex items-baseline gap-1 mt-auto">
+          <p className="text-2xl font-black tracking-tight leading-none">{num}</p>
+          {unit && <p className="text-xs font-bold opacity-80">{unit}</p>}
+        </div>
+        {subtitle && <p className="text-[10px] font-semibold opacity-60 mt-1.5">{subtitle}</p>}
       </div>
-      <div>
-        <p className="text-[10px] font-bold uppercase tracking-wider opacity-80">{title}</p>
-        {subtitle && <p className="text-[10px] font-semibold opacity-60 mt-0.5">{subtitle}</p>}
-      </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <div className="w-full h-full bg-slate-50 border-r border-slate-200 flex flex-col shadow-2xl relative">
