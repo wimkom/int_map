@@ -194,7 +194,6 @@ export default function Sidebar({
             { id: 'dashboard', icon: PieChart, label: 'Dash' },
             { id: 'list', icon: List, label: 'Daftar' },
             { id: 'search', icon: Search, label: 'Cari' },
-            { id: 'report', icon: PlusCircle, label: 'Laporan' },
             { id: 'settings', icon: Settings, label: 'Sistem' }
           ].map(tab => (
             <button 
@@ -535,56 +534,7 @@ export default function Sidebar({
           </div>
         )}
 
-        {/* REPORT TAB */}
-        {activeTab === "report" && (
-          <div className="p-4 animate-in fade-in duration-300">
-            {/* Field Input Concept */}
-            <div className="bg-gradient-to-b from-blue-600 to-blue-800 p-5 rounded-2xl shadow-lg text-white mb-6">
-              <div className="flex items-center mb-3">
-                <PlusCircle size={20} className="text-blue-200 mr-2" />
-                <h2 className="text-sm font-black uppercase tracking-widest">Laporan Lapangan</h2>
-              </div>
-              <p className="text-[11px] font-medium text-blue-100 mb-5 leading-relaxed">Pembaruan progres atau pelaporan kerusakan jalan langsung dari titik lokasi.</p>
-              
-              <div className="space-y-3 bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/20">
-                <div className="flex gap-3">
-                  <div className="flex-1">
-                    <label className="text-[10px] font-bold text-blue-200 mb-1.5 block uppercase">STA Awal</label>
-                    <input type="text" placeholder="120+200" className="w-full px-3 py-2.5 bg-white/90 rounded-lg text-xs font-bold text-slate-800 placeholder-slate-400 focus:outline-none" />
-                  </div>
-                  <div className="flex-1">
-                    <label className="text-[10px] font-bold text-blue-200 mb-1.5 block uppercase">STA Akhir</label>
-                    <input type="text" placeholder="120+400" className="w-full px-3 py-2.5 bg-white/90 rounded-lg text-xs font-bold text-slate-800 placeholder-slate-400 focus:outline-none" />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="text-[10px] font-bold text-blue-200 mb-1.5 block uppercase">Jenis Laporan</label>
-                  <select className="w-full px-3 py-2.5 bg-white/90 rounded-lg text-xs font-bold text-slate-800 focus:outline-none appearance-none">
-                    <option>Progres Pengaspalan</option>
-                    <option>Laporan Lubang (Pothole)</option>
-                    <option>Pekerjaan Pemeliharaan Rutin</option>
-                    <option>Kendala Cuaca / Lapangan</option>
-                  </select>
-                </div>
 
-                <div className="border-2 border-dashed border-blue-300/50 p-4 mt-2 text-center text-xs font-bold text-white rounded-xl bg-white/5 hover:bg-white/10 cursor-pointer transition-colors flex flex-col items-center justify-center gap-2">
-                  <Camera size={20} className="opacity-70" />
-                  Ambil Foto Kondisi
-                </div>
-
-                <button className="w-full bg-white text-blue-700 text-sm py-3 rounded-xl font-black shadow-lg hover:bg-slate-50 transition-colors mt-3">
-                  Kirim Laporan
-                </button>
-              </div>
-            </div>
-            
-            <div className="flex items-start p-4 bg-slate-100 rounded-2xl border border-slate-200">
-              <Info size={16} className="text-slate-500 mr-2 shrink-0 mt-0.5" />
-              <p className="text-[11px] font-medium text-slate-600 leading-relaxed">Laporan akan otomatis disinkronkan ke database pusat dan muncul sebagai titik baru di peta (Fitur Firebase).</p>
-            </div>
-          </div>
-        )}
 
         {/* SETTINGS TAB */}
         {activeTab === "settings" && (
