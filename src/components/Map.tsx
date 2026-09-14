@@ -128,6 +128,17 @@ function DynamicMarker({ coord, isMyLocation, roadGeoJson, staLabels, triggerTim
               <p className="text-[10px] mt-1">Titik ini tidak masuk dalam daftar penanganan aktif.</p>
             </div>
           )}
+          
+          <div className="mt-3 text-center">
+            <a 
+              href={`https://www.google.com/maps/dir/?api=1&destination=${coord[0]},${coord[1]}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 py-2 rounded-lg text-xs font-bold transition-colors border border-blue-200 shadow-sm"
+            >
+              🧭 Rute ke Titik Ini
+            </a>
+          </div>
         </div>
       </Popup>
     </Marker>
