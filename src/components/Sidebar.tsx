@@ -115,7 +115,7 @@ export default function Sidebar({
     // Clean input
     const cleanSearch = staInput.toLowerCase().replace(/[^0-9]/g, '');
     
-    let closestFeature = null;
+    let closestFeature: any = null;
     let minDiff = Infinity;
 
     staLabels.features.forEach((f: any) => {
