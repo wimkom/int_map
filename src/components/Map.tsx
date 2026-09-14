@@ -154,7 +154,16 @@ const createSmallDot = (color: string) => {
   });
 };
 
-export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, baseRoad, staLabels }: any) {
+const createBridgeIcon = () => {
+  return new L.DivIcon({
+    className: "clear-icon",
+    html: `<div style="background-color: #8b5cf6; width: 16px; height: 16px; border-radius: 4px; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;"><span style="color: white; font-size: 10px; font-weight: bold;">J</span></div>`,
+    iconSize: [16, 16],
+    iconAnchor: [8, 8],
+  });
+};
+
+export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, baseRoad, staLabels, bridges }: any) {
   const center: [number, number] = [-2.919, 103.463];
   
   const [myLocation, setMyLocation] = useState<[number, number] | null>(null);
@@ -255,6 +264,28 @@ export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, b
                 `<span style="font-weight:bold;">STA ${feature.properties.name}</span>`,
                 { permanent: false, direction: 'top', offset: [0, -4] }
               );
+            }}
+          />
+        )}
+
+        {bridges && (
+          <GeoJSON
+            data={bridges}
+            pointToLayer={(feature, latlng) => {
+              return L.marker(latlng, { icon: createBridgeIcon() })
+                .bindTooltip(
+                  `<span style="font-weight:bold;">${feature.properties.name}</span>`,
+                  { permanent: false, direction: 'top', offset: [0, -6] }
+                )
+                .bindPopup(`
+                  <div style="font-family: sans-serif; padding: 4px;">
+                    <h3 style="margin: 0 0 6px 0; font-size: 14px; font-weight: bold; color: #8b5cf6; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">🌉 Jembatan ${feature.properties.name}</h3>
+                    <p style="margin: 0 0 2px 0; font-size: 11px;"><strong>No Jembatan:</strong> ${feature.properties.no}</p>
+                    <p style="margin: 0 0 2px 0; font-size: 11px;"><strong>Panjang:</strong> ${feature.properties.panjang} m</p>
+                    <p style="margin: 0 0 2px 0; font-size: 11px;"><strong>Lebar:</strong> ${feature.properties.lebar} m</p>
+                    <p style="margin: 0 0 2px 0; font-size: 11px;"><strong>Thn Bangun:</strong> ${feature.properties.tahun || '-'}</p>
+                  </div>
+                `);
             }}
           />
         )}

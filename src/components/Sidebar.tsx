@@ -26,6 +26,7 @@ export default function Sidebar({
   onSearchCoord, 
   roadGeoJson, 
   baseRoad,
+  bridges,
   onFeatureClick,
   activeDatabase,
   setActiveDatabase
@@ -33,6 +34,7 @@ export default function Sidebar({
   onSearchCoord: (coord: [number, number]) => void,
   roadGeoJson: any,
   baseRoad: any,
+  bridges: any,
   onFeatureClick: (coord: [number, number]) => void,
   activeDatabase: string,
   setActiveDatabase: (db: string) => void
@@ -77,6 +79,11 @@ export default function Sidebar({
     });
     return len;
   }, [baseRoad]);
+
+  const totalBridgeLength = useMemo(() => {
+    if (!bridges) return 0;
+    return bridges.features.reduce((sum: number, f: any) => sum + (f.properties.panjang || 0), 0);
+  }, [bridges]);
 
   const handleSearch = () => {
     const lat = parseFloat(latInput);
@@ -175,8 +182,15 @@ export default function Sidebar({
               </div>
             </div>
 
-            <h2 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-3">Rincian Penanganan</h2>
+            <h2 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-3">Rincian Infrastruktur</h2>
             <div className="grid grid-cols-2 gap-3 mb-8">
+              <StatCard 
+                title="Total Jembatan" 
+                count={`${bridges?.features?.length || 0}`} 
+                subtitle={`Total Panjang: ${totalBridgeLength.toFixed(1)} m`}
+                colorClass="text-purple-600 border-purple-100" 
+                icon={Route} 
+              />
               <StatCard 
                 title="Rekonstruksi" 
                 count={`${(lengthStats["Rekonstruksi"] / 1000).toFixed(2)} KM`} 
@@ -198,21 +212,14 @@ export default function Sidebar({
                 colorClass="text-emerald-600 border-emerald-100" 
                 icon={Activity} 
               />
-              <StatCard 
-                title="Lainnya" 
-                count={`${(lengthStats["Pemeliharaan Rutin / Lainnya"] / 1000).toFixed(2)} KM`} 
-                subtitle={`${groupedHandlings["Pemeliharaan Rutin / Lainnya"]?.length || 0} Lokasi`}
-                colorClass="text-blue-600 border-blue-100" 
-                icon={Clock} 
-              />
             </div>
 
-            <h2 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-3">Legenda Warna</h2>
+            <h2 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-3">Legenda Warna Peta</h2>
             <div className="space-y-3 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+              <div className="flex items-center text-sm font-semibold text-slate-700"><div className="flex items-center justify-center w-4 h-4 rounded-[4px] bg-[#8b5cf6] mr-3 shadow-sm ring-2 ring-purple-100 text-white text-[8px] font-bold">J</div> Jembatan</div>
               <div className="flex items-center text-sm font-semibold text-slate-700"><div className="w-4 h-4 rounded-full bg-[#ff0000] mr-3 shadow-sm ring-2 ring-red-100"></div> Rekonstruksi</div>
               <div className="flex items-center text-sm font-semibold text-slate-700"><div className="w-4 h-4 rounded-full bg-[#ffff00] mr-3 shadow-sm ring-2 ring-yellow-100"></div> Rehab Mayor</div>
               <div className="flex items-center text-sm font-semibold text-slate-700"><div className="w-4 h-4 rounded-full bg-[#00ff00] mr-3 shadow-sm ring-2 ring-green-100"></div> Rehab Minor</div>
-              <div className="flex items-center text-sm font-semibold text-slate-700"><div className="w-4 h-4 rounded-full bg-[#0000ff] mr-3 shadow-sm ring-2 ring-blue-100"></div> Rutin / Lainnya</div>
               <div className="flex items-center text-xs font-semibold text-slate-400 mt-3 pt-3 border-t border-slate-100"><div className="w-4 h-4 rounded-full bg-slate-400 mr-3 opacity-50 border-2 border-dashed border-slate-600"></div> Ruas Jalan Dasar (Panduan)</div>
             </div>
           </div>

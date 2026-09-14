@@ -24,15 +24,18 @@ export default function Home() {
   const [roadGeoJson, setRoadGeoJson] = useState<any>(null);
   const [baseRoad, setBaseRoad] = useState<any>(null);
   const [staLabels, setStaLabels] = useState<any>(null);
+  const [bridges, setBridges] = useState<any>(null);
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
 
   useEffect(() => {
     setRoadGeoJson(null);
     setBaseRoad(null);
+    setBridges(null);
     
     fetch('/base_road.geojson').then(res => res.json()).then(setBaseRoad).catch(console.error);
     fetch('/fixed_road_line.geojson').then(res => res.json()).then(setRoadGeoJson).catch(console.error);
     fetch('/sta_labels_full.geojson').then(res => res.json()).then(setStaLabels).catch(console.error);
+    fetch('/bridges.json').then(res => res.json()).then(setBridges).catch(console.error);
   }, [activeDatabase]);
 
   return (
@@ -66,6 +69,7 @@ export default function Home() {
           }} 
           roadGeoJson={roadGeoJson}
           baseRoad={baseRoad}
+          bridges={bridges}
           onFeatureClick={(coord) => {
             setFocusedFeatureCoord(coord);
             if (window.innerWidth < 768) setIsMobileSidebarOpen(false);
@@ -91,6 +95,7 @@ export default function Home() {
           roadGeoJson={roadGeoJson}
           baseRoad={baseRoad}
           staLabels={staLabels}
+          bridges={bridges}
         />
       </div>
 
