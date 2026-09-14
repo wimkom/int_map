@@ -144,7 +144,7 @@ export default function Sidebar({
       {/* Header */}
       <div className="p-5 bg-slate-900 text-white relative overflow-hidden hidden md:block shrink-0">
         <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500 rounded-full blur-[60px] opacity-20 -mr-10 -mt-10"></div>
-        <h1 className="text-2xl font-black tracking-tight">SI-MANTAP <span className="text-blue-400">1.4</span></h1>
+        <h1 className="text-2xl font-black tracking-tight">PETA PPK <span className="text-blue-400">1.4</span></h1>
         <p className="text-xs font-semibold text-slate-400 mt-1 uppercase tracking-widest">PPK 1.4 BBPJN Sumsel</p>
       </div>
 

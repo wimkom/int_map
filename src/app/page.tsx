@@ -44,7 +44,7 @@ export default function Home() {
       {/* Mobile Floating Header */}
       <div className="md:hidden absolute top-4 left-4 right-4 z-[400] flex justify-between items-center bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-3 border border-slate-200/50">
         <div>
-          <h1 className="text-base font-black text-slate-800 tracking-tight">SI-MANTAP <span className="text-blue-600">1.4</span></h1>
+          <h1 className="text-base font-black text-slate-800 tracking-tight">PETA PPK <span className="text-blue-600">1.4</span></h1>
           <p className="text-[10px] font-bold text-slate-500 uppercase">M. Beliti - Mangunjaya</p>
         </div>
         <button 
