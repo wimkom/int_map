@@ -43,6 +43,7 @@ export default function Sidebar({
   const [latInput, setLatInput] = useState("");
   const [lngInput, setLngInput] = useState("");
   const [listFilter, setListFilter] = useState("Semua");
+  const [listMode, setListMode] = useState<"jalan" | "jembatan">("jalan");
 
   const handlings = roadGeoJson ? roadGeoJson.features.filter((f: any) => f.geometry.type === 'LineString') : [];
   
@@ -100,6 +101,8 @@ export default function Sidebar({
       const midIdx = Math.floor(feature.geometry.coordinates.length / 2);
       const coord = feature.geometry.coordinates[midIdx];
       onFeatureClick([coord[1], coord[0]]);
+    } else if (feature.geometry.type === 'Point') {
+      onFeatureClick([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
     }
   };
 
@@ -229,63 +232,129 @@ export default function Sidebar({
         {activeTab === "list" && (
           <div className="animate-in fade-in duration-300">
             <div className="sticky top-0 bg-slate-50 pb-3 z-10">
-              <div className="flex items-center bg-white border border-slate-200 rounded-xl p-1 shadow-sm">
-                <div className="pl-3 text-slate-400"><Filter size={16} /></div>
-                <select 
-                  value={listFilter}
-                  onChange={(e) => setListFilter(e.target.value)}
-                  className="w-full bg-transparent text-sm font-bold text-slate-700 py-2.5 px-3 focus:outline-none appearance-none"
+              
+              {/* Segmented Control for Jalan vs Jembatan */}
+              <div className="flex bg-slate-200/50 p-1 rounded-xl mb-4">
+                <button 
+                  onClick={() => setListMode("jalan")} 
+                  className={`flex-1 py-1.5 text-xs font-bold rounded-lg transition-all ${listMode === "jalan" ? "bg-white text-blue-700 shadow-sm ring-1 ring-slate-200" : "text-slate-500 hover:text-slate-700"}`}
                 >
-                  {availableTypes.map(t => (
-                    <option key={t} value={t}>
-                      {t === "Semua" ? "Tampilkan Semua Kelas" : `${t} (${groupedHandlings[t]?.length || 0})`}
-                    </option>
-                  ))}
-                </select>
+                  Penanganan Jalan
+                </button>
+                <button 
+                  onClick={() => setListMode("jembatan")} 
+                  className={`flex-1 py-1.5 text-xs font-bold rounded-lg transition-all ${listMode === "jembatan" ? "bg-white text-purple-700 shadow-sm ring-1 ring-slate-200" : "text-slate-500 hover:text-slate-700"}`}
+                >
+                  Infrastruktur Jembatan
+                </button>
               </div>
+
+              {listMode === "jalan" && (
+                <div className="flex items-center bg-white border border-slate-200 rounded-xl p-1 shadow-sm">
+                  <div className="pl-3 text-slate-400"><Filter size={16} /></div>
+                  <select 
+                    value={listFilter}
+                    onChange={(e) => setListFilter(e.target.value)}
+                    className="w-full bg-transparent text-sm font-bold text-slate-700 py-2.5 px-3 focus:outline-none appearance-none"
+                  >
+                    {availableTypes.map(t => (
+                      <option key={t} value={t}>
+                        {t === "Semua" ? "Tampilkan Semua Kelas" : `${t} (${groupedHandlings[t]?.length || 0})`}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              )}
             </div>
             
-            <div className="space-y-6 mt-2">
-              {displayedTypes.map(type => {
-                let borderColor = "border-slate-300";
-                let badgeColor = "bg-slate-100 text-slate-600";
-                if (type === "Rekonstruksi") { borderColor = "border-red-500"; badgeColor = "bg-red-50 text-red-700"; }
-                if (type === "Rehab Mayor") { borderColor = "border-amber-400"; badgeColor = "bg-amber-50 text-amber-700"; }
-                if (type === "Rehab Minor") { borderColor = "border-emerald-500"; badgeColor = "bg-emerald-50 text-emerald-700"; }
-                
-                return (
-                <div key={type}>
+            {listMode === "jalan" && (
+              <div className="space-y-6 mt-2">
+                {displayedTypes.map(type => {
+                  let borderColor = "border-slate-300";
+                  let badgeColor = "bg-slate-100 text-slate-600";
+                  if (type === "Rekonstruksi") { borderColor = "border-red-500"; badgeColor = "bg-red-50 text-red-700"; }
+                  if (type === "Rehab Mayor") { borderColor = "border-amber-400"; badgeColor = "bg-amber-50 text-amber-700"; }
+                  if (type === "Rehab Minor") { borderColor = "border-emerald-500"; badgeColor = "bg-emerald-50 text-emerald-700"; }
+                  
+                  return (
+                  <div key={type}>
+                    <div className="flex items-center justify-between mb-3">
+                      <h3 className="text-xs font-black text-slate-800 uppercase tracking-wider">{type}</h3>
+                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${badgeColor}`}>
+                        {groupedHandlings[type]?.length || 0} Lokasi
+                      </span>
+                    </div>
+                    <div className="space-y-2.5">
+                      {groupedHandlings[type]?.map((h: any, idx: number) => {
+                        const len = calculateFeatureLength(h);
+                        return (
+                        <div 
+                          key={idx} 
+                          onClick={() => handleFeatureClick(h)}
+                          className={`bg-white p-3.5 border-l-4 ${borderColor} border-y border-r border-slate-200 rounded-xl cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all group`}
+                        >
+                          <div className="flex justify-between items-start">
+                            <p className="font-bold text-slate-800 text-sm group-hover:text-blue-600 transition-colors flex-1">{h.properties.name}</p>
+                            <span className="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-1 rounded-md ml-2 shrink-0">{(len).toFixed(0)} meter</span>
+                          </div>
+                          <p className="text-xs font-medium text-slate-500 mt-2 leading-relaxed bg-slate-50 p-2 rounded-lg border border-slate-100">{h.properties.description || 'Tidak ada deskripsi'}</p>
+                        </div>
+                      )})}
+                      {(!groupedHandlings[type] || groupedHandlings[type].length === 0) && (
+                        <div className="p-4 border border-dashed border-slate-300 rounded-xl text-center">
+                          <p className="text-xs font-medium text-slate-400">Tidak ada data penanganan.</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )})}
+              </div>
+            )}
+
+            {listMode === "jembatan" && (
+              <div className="space-y-6 mt-2">
+                <div>
                   <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-xs font-black text-slate-800 uppercase tracking-wider">{type}</h3>
-                    <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${badgeColor}`}>
-                      {groupedHandlings[type]?.length || 0} Lokasi
+                    <h3 className="text-xs font-black text-slate-800 uppercase tracking-wider">Daftar Jembatan</h3>
+                    <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-50 text-purple-700">
+                      {bridges?.features?.length || 0} Unit
                     </span>
                   </div>
                   <div className="space-y-2.5">
-                    {groupedHandlings[type]?.map((h: any, idx: number) => {
-                      const len = calculateFeatureLength(h);
-                      return (
+                    {bridges?.features?.map((b: any, idx: number) => (
                       <div 
                         key={idx} 
-                        onClick={() => handleFeatureClick(h)}
-                        className={`bg-white p-3.5 border-l-4 ${borderColor} border-y border-r border-slate-200 rounded-xl cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all group`}
+                        onClick={() => handleFeatureClick(b)}
+                        className="bg-white p-3.5 border-l-4 border-purple-500 border-y border-r border-slate-200 rounded-xl cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all group relative overflow-hidden"
                       >
-                        <div className="flex justify-between items-start">
-                          <p className="font-bold text-slate-800 text-sm group-hover:text-blue-600 transition-colors flex-1">{h.properties.name}</p>
-                          <span className="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-1 rounded-md ml-2 shrink-0">{(len).toFixed(0)} meter</span>
+                        <div className="absolute right-[-10px] top-[-10px] opacity-5">
+                          <Route size={64} />
                         </div>
-                        <p className="text-xs font-medium text-slate-500 mt-2 leading-relaxed bg-slate-50 p-2 rounded-lg border border-slate-100">{h.properties.description || 'Tidak ada deskripsi'}</p>
+                        <div className="flex justify-between items-start relative z-10">
+                          <p className="font-bold text-slate-800 text-sm group-hover:text-purple-600 transition-colors flex-1">{b.properties.name}</p>
+                          <span className="text-[10px] font-bold bg-purple-50 text-purple-600 px-2 py-1 rounded-md ml-2 shrink-0">{b.properties.panjang} m</span>
+                        </div>
+                        <div className="grid grid-cols-2 gap-2 mt-2 bg-slate-50 p-2 rounded-lg border border-slate-100 relative z-10">
+                          <div>
+                            <p className="text-[9px] font-bold text-slate-400 uppercase">Nomor Jembatan</p>
+                            <p className="text-xs font-semibold text-slate-700">{b.properties.no}</p>
+                          </div>
+                          <div>
+                            <p className="text-[9px] font-bold text-slate-400 uppercase">Dimensi Lebar</p>
+                            <p className="text-xs font-semibold text-slate-700">{b.properties.lebar} meter</p>
+                          </div>
+                        </div>
                       </div>
-                    )})}
-                    {(!groupedHandlings[type] || groupedHandlings[type].length === 0) && (
+                    ))}
+                    {(!bridges || bridges.features.length === 0) && (
                       <div className="p-4 border border-dashed border-slate-300 rounded-xl text-center">
-                        <p className="text-xs font-medium text-slate-400">Tidak ada data penanganan.</p>
+                        <p className="text-xs font-medium text-slate-400">Tidak ada data jembatan.</p>
                       </div>
                     )}
                   </div>
                 </div>
-              )})}
-            </div>
+              </div>
+            )}
           </div>
         )}
 
