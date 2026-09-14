@@ -27,6 +27,12 @@ export default function Home() {
   const [bridges, setBridges] = useState<any>(null);
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
 
+  // Map Layer States
+  const [showBridges, setShowBridges] = useState(true);
+  const [showRoads, setShowRoads] = useState(true);
+  const [showSta, setShowSta] = useState(true);
+  const [showBaseRoad, setShowBaseRoad] = useState(true);
+
   useEffect(() => {
     setRoadGeoJson(null);
     setBaseRoad(null);
@@ -39,7 +45,7 @@ export default function Home() {
   }, [activeDatabase]);
 
   return (
-    <main className="flex h-[100dvh] w-full bg-slate-100 overflow-hidden relative font-sans">
+    <main className="flex h-[100dvh] w-full bg-slate-100 overflow-hidden relative">
       
       {/* Mobile Floating Header */}
       <div className="md:hidden absolute top-4 left-4 right-4 z-[400] flex justify-between items-center bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-3 border border-slate-200/50">
@@ -49,7 +55,7 @@ export default function Home() {
         </div>
         <button 
           onClick={() => setIsMobileSidebarOpen(!isMobileSidebarOpen)}
-          className="bg-blue-600 text-white p-2 rounded-xl shadow-md active:scale-95 transition-transform"
+          className="w-10 h-10 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl flex items-center justify-center transition-colors"
         >
           {isMobileSidebarOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -70,12 +76,19 @@ export default function Home() {
           roadGeoJson={roadGeoJson}
           baseRoad={baseRoad}
           bridges={bridges}
+          staLabels={staLabels}
           onFeatureClick={(coord) => {
             setFocusedFeatureCoord(coord);
             if (window.innerWidth < 768) setIsMobileSidebarOpen(false);
           }}
           activeDatabase={activeDatabase}
           setActiveDatabase={setActiveDatabase}
+          
+          // Layer controls
+          showBridges={showBridges} setShowBridges={setShowBridges}
+          showRoads={showRoads} setShowRoads={setShowRoads}
+          showSta={showSta} setShowSta={setShowSta}
+          showBaseRoad={showBaseRoad} setShowBaseRoad={setShowBaseRoad}
         />
       </div>
 
@@ -92,10 +105,10 @@ export default function Home() {
         <MapWithNoSSR 
           searchedCoord={searchedCoord} 
           focusedFeatureCoord={focusedFeatureCoord}
-          roadGeoJson={roadGeoJson}
-          baseRoad={baseRoad}
-          staLabels={staLabels}
-          bridges={bridges}
+          roadGeoJson={showRoads ? roadGeoJson : null}
+          baseRoad={showBaseRoad ? baseRoad : null}
+          staLabels={showSta ? staLabels : null}
+          bridges={showBridges ? bridges : null}
         />
       </div>
 

@@ -195,10 +195,18 @@ export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, b
 
   const onEachLineFeature = (feature: any, layer: any) => {
     if (feature.properties && feature.properties.name) {
+      let lat = 0, lng = 0;
+      if (feature.geometry && feature.geometry.coordinates && feature.geometry.coordinates.length > 0) {
+        const mid = Math.floor(feature.geometry.coordinates.length / 2);
+        lat = feature.geometry.coordinates[mid][1];
+        lng = feature.geometry.coordinates[mid][0];
+      }
+      
       layer.bindPopup(`
         <div style="font-family: sans-serif; padding: 4px;">
           <h3 style="margin: 0 0 4px 0; font-size: 14px; font-weight: bold;">${feature.properties.name}</h3>
-          <p style="margin: 0; font-size: 12px; color: #555;">${feature.properties.description || ''}</p>
+          <p style="margin: 0 0 8px 0; font-size: 12px; color: #555;">${feature.properties.description || ''}</p>
+          ${lat !== 0 ? `<a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" target="_blank" style="display: inline-block; background: #eff6ff; color: #2563eb; text-decoration: none; padding: 6px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; border: 1px solid #bfdbfe;">🧭 Rute ke Lokasi</a>` : ''}
         </div>
       `);
       
@@ -283,7 +291,8 @@ export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, b
                     <p style="margin: 0 0 2px 0; font-size: 11px;"><strong>No Jembatan:</strong> ${feature.properties.no}</p>
                     <p style="margin: 0 0 2px 0; font-size: 11px;"><strong>Panjang:</strong> ${feature.properties.panjang} m</p>
                     <p style="margin: 0 0 2px 0; font-size: 11px;"><strong>Lebar:</strong> ${feature.properties.lebar} m</p>
-                    <p style="margin: 0 0 2px 0; font-size: 11px;"><strong>Thn Bangun:</strong> ${feature.properties.tahun || '-'}</p>
+                    <p style="margin: 0 0 8px 0; font-size: 11px;"><strong>Thn Bangun:</strong> ${feature.properties.tahun || '-'}</p>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=${(latlng as any).lat},${(latlng as any).lng}" target="_blank" style="display: inline-block; background: #faf5ff; color: #9333ea; text-decoration: none; padding: 6px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; border: 1px solid #e9d5ff;">🧭 Rute ke Jembatan</a>
                   </div>
                 `);
             }}

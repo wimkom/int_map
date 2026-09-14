@@ -1,4 +1,4 @@
-import { MapPin, Activity, CheckCircle, Clock, Search, Navigation, List, Settings, Database, PlusCircle, Filter, PieChart, Info, Camera, Route } from "lucide-react";
+import { MapPin, Activity, CheckCircle, Clock, Search, Navigation, List, Settings, Database, PlusCircle, Filter, PieChart, Info, Camera, Route, Map as MapIcon, Layers, Eye, EyeOff } from "lucide-react";
 import { useState, useMemo } from "react";
 
 function getDistanceInMeters(lat1: number, lon1: number, lat2: number, lon2: number) {
@@ -27,21 +27,33 @@ export default function Sidebar({
   roadGeoJson, 
   baseRoad,
   bridges,
+  staLabels,
   onFeatureClick,
   activeDatabase,
-  setActiveDatabase
+  setActiveDatabase,
+  showBridges, setShowBridges,
+  showRoads, setShowRoads,
+  showSta, setShowSta,
+  showBaseRoad, setShowBaseRoad
 }: { 
   onSearchCoord: (coord: [number, number]) => void,
   roadGeoJson: any,
   baseRoad: any,
   bridges: any,
+  staLabels: any,
   onFeatureClick: (coord: [number, number]) => void,
   activeDatabase: string,
-  setActiveDatabase: (db: string) => void
+  setActiveDatabase: (db: string) => void,
+  showBridges: boolean, setShowBridges: (v: boolean) => void,
+  showRoads: boolean, setShowRoads: (v: boolean) => void,
+  showSta: boolean, setShowSta: (v: boolean) => void,
+  showBaseRoad: boolean, setShowBaseRoad: (v: boolean) => void
 }) {
   const [activeTab, setActiveTab] = useState("dashboard");
   const [latInput, setLatInput] = useState("");
   const [lngInput, setLngInput] = useState("");
+  const [staInput, setStaInput] = useState("");
+  const [searchMode, setSearchMode] = useState<"gps" | "sta">("gps");
   const [listFilter, setListFilter] = useState("Semua");
   const [listMode, setListMode] = useState<"jalan" | "jembatan">("jalan");
   const [bridgeSearch, setBridgeSearch] = useState("");
@@ -87,13 +99,40 @@ export default function Sidebar({
     return bridges.features.reduce((sum: number, f: any) => sum + (f.properties.panjang || 0), 0);
   }, [bridges]);
 
-  const handleSearch = () => {
+  const handleSearchGPS = () => {
     const lat = parseFloat(latInput);
     const lng = parseFloat(lngInput);
     if (!isNaN(lat) && !isNaN(lng)) {
       onSearchCoord([lat, lng]);
     } else {
       alert("Masukkan koordinat yang valid (contoh: Lat -2.9, Lng 103.4)");
+    }
+  };
+
+  const handleSearchSTA = () => {
+    if (!staInput.trim() || !staLabels) return;
+    
+    // Clean input
+    const cleanSearch = staInput.toLowerCase().replace(/[^0-9]/g, '');
+    
+    let closestFeature = null;
+    let minDiff = Infinity;
+
+    staLabels.features.forEach((f: any) => {
+      if (f.geometry.type === 'Point' && f.properties && f.properties.name) {
+        const cleanName = f.properties.name.toLowerCase().replace(/[^0-9]/g, '');
+        const diff = Math.abs(parseInt(cleanSearch) - parseInt(cleanName));
+        if (diff < minDiff) {
+          minDiff = diff;
+          closestFeature = f;
+        }
+      }
+    });
+
+    if (closestFeature) {
+      onFeatureClick([closestFeature.geometry.coordinates[1], closestFeature.geometry.coordinates[0]]);
+    } else {
+      alert("Patok STA tidak ditemukan di database.");
     }
   };
 
@@ -311,6 +350,12 @@ export default function Sidebar({
                       <div className="space-y-2.5">
                         {groupedHandlings[type]?.map((h: any, idx: number) => {
                           const len = calculateFeatureLength(h);
+                          let lat = 0, lng = 0;
+                          if (h.geometry.coordinates.length > 0) {
+                            const mid = Math.floor(h.geometry.coordinates.length / 2);
+                            lat = h.geometry.coordinates[mid][1];
+                            lng = h.geometry.coordinates[mid][0];
+                          }
                           return (
                           <div 
                             key={idx} 
@@ -322,6 +367,22 @@ export default function Sidebar({
                               <span className="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-1 rounded-md ml-2 shrink-0">{(len).toFixed(0)} meter</span>
                             </div>
                             <p className="text-xs font-medium text-slate-500 mt-2 leading-relaxed bg-slate-50 p-2 rounded-lg border border-slate-100">{h.properties.description || 'Tidak ada deskripsi'}</p>
+                            
+                            {/* Navigation Link for Penanganan */}
+                            {lat !== 0 && (
+                              <div className="mt-2 text-right">
+                                <a 
+                                  href={`https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  onClick={(e) => e.stopPropagation()}
+                                  className="inline-flex items-center text-[10px] font-bold text-blue-600 bg-blue-50 hover:bg-blue-100 px-2.5 py-1.5 rounded-lg transition-colors"
+                                >
+                                  <MapIcon size={12} className="mr-1.5" />
+                                  Navigasi ke Lokasi
+                                </a>
+                              </div>
+                            )}
                           </div>
                         )})}
                         {(!groupedHandlings[type] || groupedHandlings[type].length === 0) && (
@@ -347,7 +408,10 @@ export default function Sidebar({
                       </span>
                     </div>
                     <div className="space-y-2.5">
-                      {filteredBridges.map((b: any, idx: number) => (
+                      {filteredBridges.map((b: any, idx: number) => {
+                        const lat = b.geometry.coordinates[1];
+                        const lng = b.geometry.coordinates[0];
+                        return (
                         <div 
                           key={idx} 
                           onClick={() => handleFeatureClick(b)}
@@ -370,8 +434,21 @@ export default function Sidebar({
                               <p className="text-xs font-semibold text-slate-700">{b.properties.lebar} meter</p>
                             </div>
                           </div>
+                          {/* Navigation Link */}
+                          <div className="mt-2 text-right relative z-10">
+                            <a 
+                              href={`https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                              className="inline-flex items-center text-[10px] font-bold text-purple-600 bg-purple-50 hover:bg-purple-100 px-2.5 py-1.5 rounded-lg transition-colors"
+                            >
+                              <MapIcon size={12} className="mr-1.5" />
+                              Navigasi ke Jembatan
+                            </a>
+                          </div>
                         </div>
-                      ))}
+                      )})}
                       {filteredBridges.length === 0 && (
                         <div className="p-4 border border-dashed border-slate-300 rounded-xl text-center">
                           <p className="text-xs font-medium text-slate-400">Tidak ada jembatan yang cocok dengan "{bridgeSearch}".</p>
@@ -389,30 +466,71 @@ export default function Sidebar({
         {activeTab === "search" && (
           <div className="p-4 animate-in fade-in duration-300">
             <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm mb-6">
-              <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-4">
-                <Search size={24} />
-              </div>
-              <h2 className="text-lg font-black text-slate-800 mb-1">Lacak Koordinat</h2>
-              <p className="text-xs font-medium text-slate-500 mb-5 leading-relaxed">Masukkan titik GPS untuk mendeteksi apakah lokasi tersebut masuk ke dalam area penanganan tahun ini.</p>
               
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Latitude (Y)</label>
-                  <input type="number" value={latInput} onChange={(e) => setLatInput(e.target.value)} placeholder="-2.919" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all" />
-                </div>
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Longitude (X)</label>
-                  <input type="number" value={lngInput} onChange={(e) => setLngInput(e.target.value)} placeholder="103.463" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all" />
-                </div>
-                <button onClick={handleSearch} className="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg hover:shadow-blue-500/30 transition-all flex justify-center items-center text-sm mt-2">
-                  <Navigation size={18} className="mr-2" /> Pindai Lokasi
+              <div className="flex bg-slate-200/50 p-1 rounded-xl mb-6">
+                <button 
+                  onClick={() => setSearchMode("gps")} 
+                  className={`flex-1 py-1.5 text-xs font-bold rounded-lg transition-all ${searchMode === "gps" ? "bg-white text-blue-700 shadow-sm ring-1 ring-slate-200" : "text-slate-500 hover:text-slate-700"}`}
+                >
+                  Koordinat GPS
+                </button>
+                <button 
+                  onClick={() => setSearchMode("sta")} 
+                  className={`flex-1 py-1.5 text-xs font-bold rounded-lg transition-all ${searchMode === "sta" ? "bg-white text-blue-700 shadow-sm ring-1 ring-slate-200" : "text-slate-500 hover:text-slate-700"}`}
+                >
+                  Patok STA
                 </button>
               </div>
+
+              {searchMode === "gps" ? (
+                <>
+                  <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-4">
+                    <Navigation size={20} />
+                  </div>
+                  <h2 className="text-lg font-black text-slate-800 mb-1">Lacak Koordinat</h2>
+                  <p className="text-xs font-medium text-slate-500 mb-5 leading-relaxed">Masukkan titik Latitude & Longitude untuk melihat posisinya di peta dan mendeteksi penanganan.</p>
+                  
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Latitude (Y)</label>
+                      <input type="number" value={latInput} onChange={(e) => setLatInput(e.target.value)} placeholder="-2.919" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all" />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Longitude (X)</label>
+                      <input type="number" value={lngInput} onChange={(e) => setLngInput(e.target.value)} placeholder="103.463" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all" />
+                    </div>
+                    <button onClick={handleSearchGPS} className="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg hover:shadow-blue-500/30 transition-all flex justify-center items-center text-sm mt-2">
+                      <Search size={18} className="mr-2" /> Cari Koordinat
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center mb-4">
+                    <MapPin size={20} />
+                  </div>
+                  <h2 className="text-lg font-black text-slate-800 mb-1">Cari Patok STA</h2>
+                  <p className="text-xs font-medium text-slate-500 mb-5 leading-relaxed">Masukkan angka STA (contoh: 120 atau 120+500) untuk menemukan lokasi perkiraannya di peta.</p>
+                  
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Nomor STA</label>
+                      <div className="flex items-center">
+                        <span className="bg-slate-100 border border-r-0 border-slate-200 px-3 py-3 rounded-l-xl text-sm font-bold text-slate-500">STA</span>
+                        <input type="text" value={staInput} onChange={(e) => setStaInput(e.target.value)} placeholder="120+500" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-r-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all" />
+                      </div>
+                    </div>
+                    <button onClick={handleSearchSTA} className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg hover:shadow-indigo-500/30 transition-all flex justify-center items-center text-sm mt-2">
+                      <Search size={18} className="mr-2" /> Temukan STA
+                    </button>
+                  </div>
+                </>
+              )}
             </div>
             
             <div className="flex items-start p-4 bg-blue-50 rounded-2xl border border-blue-100">
               <Info size={16} className="text-blue-500 mr-2 shrink-0 mt-0.5" />
-              <p className="text-[11px] font-medium text-blue-800 leading-relaxed">Sistem mendeteksi radius 50 meter dari titik yang Anda masukkan untuk memvalidasi area kerja.</p>
+              <p className="text-[11px] font-medium text-blue-800 leading-relaxed">Pencarian patok STA ini akan mencari data koordinat terdekat dari titik yang diketik.</p>
             </div>
           </div>
         )}
@@ -463,7 +581,7 @@ export default function Sidebar({
             
             <div className="flex items-start p-4 bg-slate-100 rounded-2xl border border-slate-200">
               <Info size={16} className="text-slate-500 mr-2 shrink-0 mt-0.5" />
-              <p className="text-[11px] font-medium text-slate-600 leading-relaxed">Laporan akan otomatis disinkronkan ke database pusat dan muncul sebagai titik baru di peta (Fitur segera hadir).</p>
+              <p className="text-[11px] font-medium text-slate-600 leading-relaxed">Laporan akan otomatis disinkronkan ke database pusat dan muncul sebagai titik baru di peta (Fitur Firebase).</p>
             </div>
           </div>
         )}
@@ -471,6 +589,43 @@ export default function Sidebar({
         {/* SETTINGS TAB */}
         {activeTab === "settings" && (
           <div className="p-4 animate-in fade-in duration-300">
+            
+            {/* Map Layers Card */}
+            <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm mb-4">
+              <div className="flex items-center mb-4">
+                <div className="w-8 h-8 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center mr-3">
+                  <Layers size={16} />
+                </div>
+                <h2 className="text-sm font-black text-slate-800 uppercase tracking-widest">Filter Layer Peta</h2>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-100">
+                  <span className="text-xs font-bold text-slate-700">Tampilkan Penanganan Jalan</span>
+                  <button onClick={() => setShowRoads(!showRoads)} className={`p-1.5 rounded-lg transition-colors ${showRoads ? 'bg-blue-100 text-blue-600' : 'bg-slate-200 text-slate-400'}`}>
+                    {showRoads ? <Eye size={16} /> : <EyeOff size={16} />}
+                  </button>
+                </div>
+                <div className="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-100">
+                  <span className="text-xs font-bold text-slate-700">Tampilkan Jembatan</span>
+                  <button onClick={() => setShowBridges(!showBridges)} className={`p-1.5 rounded-lg transition-colors ${showBridges ? 'bg-purple-100 text-purple-600' : 'bg-slate-200 text-slate-400'}`}>
+                    {showBridges ? <Eye size={16} /> : <EyeOff size={16} />}
+                  </button>
+                </div>
+                <div className="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-100">
+                  <span className="text-xs font-bold text-slate-700">Tampilkan Label STA</span>
+                  <button onClick={() => setShowSta(!showSta)} className={`p-1.5 rounded-lg transition-colors ${showSta ? 'bg-emerald-100 text-emerald-600' : 'bg-slate-200 text-slate-400'}`}>
+                    {showSta ? <Eye size={16} /> : <EyeOff size={16} />}
+                  </button>
+                </div>
+                <div className="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-100">
+                  <span className="text-xs font-bold text-slate-700">Tampilkan Jalan Panduan</span>
+                  <button onClick={() => setShowBaseRoad(!showBaseRoad)} className={`p-1.5 rounded-lg transition-colors ${showBaseRoad ? 'bg-slate-200 text-slate-600' : 'bg-slate-100 text-slate-300'}`}>
+                    {showBaseRoad ? <Eye size={16} /> : <EyeOff size={16} />}
+                  </button>
+                </div>
+              </div>
+            </div>
+
             {/* Database Card */}
             <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm mb-6">
               <div className="flex items-center mb-4">
