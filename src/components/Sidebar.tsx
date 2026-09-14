@@ -112,24 +112,39 @@ export default function Sidebar({
   const handleSearchSTA = () => {
     if (!staInput.trim() || !staLabels) return;
     
-    // Clean input
-    const cleanSearch = staInput.toLowerCase().replace(/[^0-9]/g, '');
+    // Convert input like "120+500" or "120.5" or "120,5" into a float (e.g., 120.5)
+    let searchVal = 0;
+    const cleanInput = staInput.toLowerCase().replace(/[^0-9\+\.,]/g, '');
+    
+    if (cleanInput.includes('+')) {
+      const parts = cleanInput.split('+');
+      const km = parseFloat(parts[0]) || 0;
+      const m = parseFloat(parts[1]) || 0;
+      // assuming meters part is 3 digits like 500. If someone types 120+50, it means 120.050.
+      searchVal = km + (m / 1000);
+    } else {
+      searchVal = parseFloat(cleanInput.replace(',', '.')) || 0;
+    }
     
     let closestFeature: any = null;
     let minDiff = Infinity;
 
     staLabels.features.forEach((f: any) => {
       if (f.geometry.type === 'Point' && f.properties && f.properties.name) {
-        const cleanName = f.properties.name.toLowerCase().replace(/[^0-9]/g, '');
-        const diff = Math.abs(parseInt(cleanSearch) - parseInt(cleanName));
-        if (diff < minDiff) {
-          minDiff = diff;
-          closestFeature = f;
+        // Feature name is usually like "74.1" or "74 " or "77.4 akhir ruas"
+        const nameMatch = f.properties.name.match(/[0-9]+(\.[0-9]+)?/);
+        if (nameMatch) {
+          const featureVal = parseFloat(nameMatch[0]);
+          const diff = Math.abs(searchVal - featureVal);
+          if (diff < minDiff) {
+            minDiff = diff;
+            closestFeature = f;
+          }
         }
       }
     });
 
-    if (closestFeature) {
+    if (closestFeature && minDiff < 20) { // arbitrary max diff so it doesn't jump wildly if out of bounds
       onFeatureClick([closestFeature.geometry.coordinates[1], closestFeature.geometry.coordinates[0]]);
     } else {
       alert("Patok STA tidak ditemukan di database.");
