@@ -22,6 +22,22 @@ function calculateFeatureLength(feature: any) {
   return totalLength;
 }
 
+function getNearestStaForBridge(bridgeLat: number, bridgeLng: number, staLabels: any) {
+  if (!staLabels || !staLabels.features) return "";
+  let minDiff = Infinity;
+  let closestName = "";
+  for (const f of staLabels.features) {
+    if (f.geometry.type === 'Point') {
+      const d = getDistanceInMeters(bridgeLat, bridgeLng, f.geometry.coordinates[1], f.geometry.coordinates[0]);
+      if (d < minDiff) {
+        minDiff = d;
+        closestName = f.properties.name;
+      }
+    }
+  }
+  return closestName;
+}
+
 export default function Sidebar({ 
   onSearchCoord, 
   roadGeoJson, 
@@ -439,6 +455,7 @@ export default function Sidebar({
                       {filteredBridges.map((b: any, idx: number) => {
                         const lat = b.geometry.coordinates[1];
                         const lng = b.geometry.coordinates[0];
+                        const closestStaName = getNearestStaForBridge(lat, lng, staLabels);
                         return (
                         <div 
                           key={idx} 
@@ -452,6 +469,13 @@ export default function Sidebar({
                             <p className="font-bold text-slate-800 text-sm group-hover:text-purple-600 transition-colors flex-1">{b.properties.name}</p>
                             <span className="text-[10px] font-bold bg-purple-50 text-purple-600 px-2 py-1 rounded-md ml-2 shrink-0">{b.properties.panjang} m</span>
                           </div>
+                          
+                          {closestStaName && (
+                            <div className="mt-1 mb-2 relative z-10">
+                              <span className="inline-block bg-purple-100 text-purple-700 text-[10px] font-bold px-2 py-0.5 rounded border border-purple-200">STA {closestStaName}</span>
+                            </div>
+                          )}
+
                           <div className="grid grid-cols-2 gap-2 mt-2 bg-slate-50 p-2 rounded-lg border border-slate-100 relative z-10">
                             <div>
                               <p className="text-[9px] font-bold text-slate-400 uppercase">Nomor Jembatan</p>

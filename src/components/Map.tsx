@@ -302,6 +302,10 @@ export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, b
           <GeoJSON
             data={bridges}
             pointToLayer={(feature, latlng) => {
+              const pt: [number, number] = [(latlng as any).lat, (latlng as any).lng];
+              const closest = findClosestSTA(pt, staLabels);
+              const staText = closest ? closest.name : "-";
+
               return L.marker(latlng, { icon: createBridgeIcon() })
                 .bindTooltip(
                   `<span style="font-weight:bold;">${feature.properties.name}</span>`,
@@ -311,6 +315,7 @@ export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, b
                   <div style="font-family: sans-serif; padding: 4px;">
                     <h3 style="margin: 0 0 6px 0; font-size: 14px; font-weight: bold; color: #8b5cf6; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">🌉 Jembatan ${feature.properties.name}</h3>
                     <p style="margin: 0 0 2px 0; font-size: 11px;"><strong>No Jembatan:</strong> ${feature.properties.no}</p>
+                    <p style="margin: 0 0 2px 0; font-size: 11px;"><strong>Posisi STA:</strong> <span style="background: #f3e8ff; padding: 1px 4px; border-radius: 4px; color: #7e22ce;">${staText}</span></p>
                     <p style="margin: 0 0 2px 0; font-size: 11px;"><strong>Panjang:</strong> ${feature.properties.panjang} m</p>
                     <p style="margin: 0 0 2px 0; font-size: 11px;"><strong>Lebar:</strong> ${feature.properties.lebar} m</p>
                     <p style="margin: 0 0 8px 0; font-size: 11px;"><strong>Thn Bangun:</strong> ${feature.properties.tahun || '-'}</p>
