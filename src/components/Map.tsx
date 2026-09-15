@@ -58,7 +58,11 @@ function findClosestSTA(coord: [number, number], staLabels: any) {
   }
   
   if (minDistance < 1000 && closestFeature) {
-    return { name: closestFeature.properties.name, distance: minDistance };
+    return { 
+      name: closestFeature.properties.name, 
+      distance: minDistance,
+      description: closestFeature.properties.description
+    };
   }
   return null; 
 }
@@ -107,10 +111,17 @@ function DynamicMarker({ coord, isMyLocation, roadGeoJson, staLabels, triggerTim
           
           <div className="mb-3">
             {closestSta ? (
-              <p className="text-sm font-bold text-slate-700">
-                Sekitar STA: <span className="text-blue-600 bg-blue-50 px-1 rounded">{closestSta.name}</span>
-                <span className="block text-[10px] text-slate-500 font-normal mt-0.5">Jarak ke titik STA: {Math.round(closestSta.distance)}m</span>
-              </p>
+              <div className="text-sm font-bold text-slate-700">
+                <p>Sekitar STA: <span className="text-blue-600 bg-blue-50 px-1 rounded">{closestSta.name}</span></p>
+                {closestSta.description && (
+                  <p className="text-[10px] text-slate-600 font-normal leading-tight mt-1 bg-slate-50 p-1 rounded border border-slate-100">
+                    {closestSta.description.includes('MANGUN JAYA') ? 'Ruas 034: ' : 
+                     closestSta.description.includes('MUARA BELITI') ? 'Ruas 035: ' : ''}
+                    {closestSta.description.trim()}
+                  </p>
+                )}
+                <span className="block text-[10px] text-slate-500 font-normal mt-1">Jarak ke titik STA: {Math.round(closestSta.distance)}m</span>
+              </div>
             ) : (
               <p className="text-xs font-bold text-amber-600 italic p-1.5 bg-amber-50 rounded">⚠️ Anda berada jauh dari ruas jalan M. Beliti - Mangunjaya.</p>
             )}

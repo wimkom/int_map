@@ -57,6 +57,7 @@ export default function Sidebar({
   const [listFilter, setListFilter] = useState("Semua");
   const [listMode, setListMode] = useState<"jalan" | "jembatan">("jalan");
   const [bridgeSearch, setBridgeSearch] = useState("");
+  const [staRuasFilter, setStaRuasFilter] = useState("semua");
 
   const handlings = roadGeoJson ? roadGeoJson.features.filter((f: any) => f.geometry.type === 'LineString') : [];
   
@@ -112,7 +113,7 @@ export default function Sidebar({
   const handleSearchSTA = () => {
     if (!staInput.trim() || !staLabels) return;
     
-    // Convert input like "120+500" or "120.5" or "120,5" into a float (e.g., 120.5)
+    // Convert input like "120+500" or "120.5" or "120,5" or "120500" into a float km (e.g., 120.5)
     let searchVal = 0;
     const cleanInput = staInput.toLowerCase().replace(/[^0-9\+\.,]/g, '');
     
@@ -120,10 +121,14 @@ export default function Sidebar({
       const parts = cleanInput.split('+');
       const km = parseFloat(parts[0]) || 0;
       const m = parseFloat(parts[1]) || 0;
-      // assuming meters part is 3 digits like 500. If someone types 120+50, it means 120.050.
       searchVal = km + (m / 1000);
     } else {
       searchVal = parseFloat(cleanInput.replace(',', '.')) || 0;
+      // If the number is huge (e.g. 120500 or 39890), it means they typed it entirely in meters.
+      // Highway STAs are usually in KM (e.g., 30 to 200). So if > 2000, we assume it's meters.
+      if (searchVal > 2000) {
+        searchVal = searchVal / 1000;
+      }
     }
     
     let closestFeature: any = null;
@@ -131,7 +136,15 @@ export default function Sidebar({
 
     staLabels.features.forEach((f: any) => {
       if (f.geometry.type === 'Point' && f.properties && f.properties.name) {
-        // Feature name is usually like "74.1" or "74 " or "77.4 akhir ruas"
+        
+        // Filter by Ruas if specific ruas is selected
+        if (staRuasFilter === "034" && (!f.properties.description || !f.properties.description.includes('MANGUN JAYA'))) {
+          return;
+        }
+        if (staRuasFilter === "035" && (!f.properties.description || !f.properties.description.includes('MUARA BELITI'))) {
+          return;
+        }
+
         const nameMatch = f.properties.name.match(/[0-9]+(\.[0-9]+)?/);
         if (nameMatch) {
           const featureVal = parseFloat(nameMatch[0]);
@@ -144,10 +157,11 @@ export default function Sidebar({
       }
     });
 
-    if (closestFeature && minDiff < 20) { // arbitrary max diff so it doesn't jump wildly if out of bounds
-      onFeatureClick([closestFeature.geometry.coordinates[1], closestFeature.geometry.coordinates[0]]);
+    if (closestFeature && minDiff < 20) { // max diff 20km
+      // Use onSearchCoord so it creates a popup marker just like GPS Search
+      onSearchCoord([closestFeature.geometry.coordinates[1], closestFeature.geometry.coordinates[0]]);
     } else {
-      alert("Patok STA tidak ditemukan di database.");
+      alert("Patok STA tidak ditemukan atau di luar jangkauan ruas jalan.");
     }
   };
 
@@ -527,6 +541,20 @@ export default function Sidebar({
                   <p className="text-xs font-medium text-slate-500 mb-5 leading-relaxed">Masukkan angka STA (contoh: 120 atau 120+500) untuk menemukan lokasi perkiraannya di peta.</p>
                   
                   <div className="space-y-4">
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Pilih Ruas</label>
+                      <select 
+                        value={staRuasFilter}
+                        onChange={(e) => setStaRuasFilter(e.target.value)}
+                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all appearance-none"
+                        style={{ backgroundImage: 'url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2394a3b8%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right .7rem top 50%', backgroundSize: '.65rem auto' }}
+                      >
+                        <option value="semua">Semua Ruas</option>
+                        <option value="034">Ruas 034: Mangunjaya - Bts. Muba/Mura</option>
+                        <option value="035">Ruas 035: Bts. Muba/Mura - Muara Beliti</option>
+                      </select>
+                    </div>
+
                     <div>
                       <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Nomor STA</label>
                       <div className="flex items-center">
