@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { MapContainer, TileLayer, GeoJSON, useMap, Marker, Popup, LayersControl } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON, useMap, Marker, Popup, LayersControl, useMapEvents, Polyline } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { LocateFixed, Cloud, Sun, CloudRain } from "lucide-react";
+import { LocateFixed, Cloud, Sun, CloudRain, Ruler, Trash2, ExternalLink } from "lucide-react";
 
 function getDistanceInMeters(lat1: number, lon1: number, lat2: number, lon2: number) {
   const R = 6371e3;
@@ -140,14 +140,22 @@ function DynamicMarker({ coord, isMyLocation, roadGeoJson, staLabels, triggerTim
             </div>
           )}
           
-          <div className="mt-3 text-center">
+          <div className="mt-3 flex gap-2">
             <a 
               href={`https://www.google.com/maps/dir/?api=1&destination=${coord[0]},${coord[1]}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block w-full bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 py-2 rounded-lg text-xs font-bold transition-colors border border-blue-200 shadow-sm"
+              className="flex-1 text-center bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 py-2 rounded-lg text-xs font-bold transition-colors border border-blue-200 shadow-sm"
             >
-              🧭 Rute ke Titik Ini
+              🧭 Rute
+            </a>
+            <a 
+              href={`https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${coord[0]},${coord[1]}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center bg-slate-50 text-slate-700 hover:bg-slate-100 py-2 rounded-lg text-xs font-bold transition-colors border border-slate-200 shadow-sm"
+            >
+              📸 Street View
             </a>
           </div>
         </div>
@@ -185,6 +193,36 @@ const createBridgeIcon = () => {
   });
 };
 
+function MeasureTool({ isMeasuring, measurePoints, setMeasurePoints }: { isMeasuring: boolean, measurePoints: [number, number][], setMeasurePoints: any }) {
+  useMapEvents({
+    click(e) {
+      if (isMeasuring) {
+        setMeasurePoints((prev: [number, number][]) => [...prev, [e.latlng.lat, e.latlng.lng]]);
+      }
+    }
+  });
+
+  if (measurePoints.length === 0) return null;
+
+  return (
+    <>
+      <Polyline positions={measurePoints} color="#f97316" weight={4} dashArray="5, 10" />
+      {measurePoints.map((pt, idx) => (
+        <Marker 
+          key={idx} 
+          position={pt} 
+          icon={new L.DivIcon({
+            className: "clear-icon",
+            html: `<div style="background-color: #f97316; width: 12px; height: 12px; border-radius: 50%; border: 2px solid white; box-shadow: 0 0 5px rgba(0,0,0,0.3);"></div>`,
+            iconSize: [12, 12],
+            iconAnchor: [6, 6]
+          })}
+        />
+      ))}
+    </>
+  );
+}
+
 export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, baseRoad, staLabels, bridges, reports }: any) {
   const center: [number, number] = [-2.919, 103.463];
   
@@ -193,6 +231,16 @@ export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, b
   
   const [searchTrigger, setSearchTrigger] = useState(0);
   const [weather, setWeather] = useState<any>(null);
+
+  const [isMeasuring, setIsMeasuring] = useState(false);
+  const [measurePoints, setMeasurePoints] = useState<[number, number][]>([]);
+
+  const totalDistance = measurePoints.length > 1 
+    ? measurePoints.reduce((acc, pt, i) => {
+        if (i === 0) return 0;
+        return acc + getDistanceInMeters(measurePoints[i-1][0], measurePoints[i-1][1], pt[0], pt[1]);
+      }, 0)
+    : 0;
 
   useEffect(() => {
     fetch("https://api.open-meteo.com/v1/forecast?latitude=-2.919&longitude=103.463&current_weather=true")
@@ -240,7 +288,12 @@ export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, b
         <div style="font-family: sans-serif; padding: 4px;">
           <h3 style="margin: 0 0 4px 0; font-size: 14px; font-weight: bold;">${feature.properties.name}</h3>
           <p style="margin: 0 0 8px 0; font-size: 12px; color: #555;">${feature.properties.description || ''}</p>
-          ${lat !== 0 ? `<a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" target="_blank" style="display: inline-block; background: #eff6ff; color: #2563eb; text-decoration: none; padding: 6px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; border: 1px solid #bfdbfe;">🧭 Rute ke Lokasi</a>` : ''}
+          ${lat !== 0 ? `
+            <div style="display: flex; gap: 8px;">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" target="_blank" style="flex: 1; text-align: center; background: #eff6ff; color: #2563eb; text-decoration: none; padding: 6px; border-radius: 6px; font-size: 10px; font-weight: bold; border: 1px solid #bfdbfe;">🧭 Rute</a>
+              <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lat},${lng}" target="_blank" style="flex: 1; text-align: center; background: #f8fafc; color: #0f172a; text-decoration: none; padding: 6px; border-radius: 6px; font-size: 10px; font-weight: bold; border: 1px solid #e2e8f0;">📸 Street View</a>
+            </div>
+          ` : ''}
         </div>
       `);
       
@@ -331,7 +384,10 @@ export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, b
                     <p style="margin: 0 0 2px 0; font-size: 11px;"><strong>Panjang:</strong> ${feature.properties.panjang} m</p>
                     <p style="margin: 0 0 2px 0; font-size: 11px;"><strong>Lebar:</strong> ${feature.properties.lebar} m</p>
                     <p style="margin: 0 0 8px 0; font-size: 11px;"><strong>Thn Bangun:</strong> ${feature.properties.tahun || '-'}</p>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=${(latlng as any).lat},${(latlng as any).lng}" target="_blank" style="display: inline-block; background: #faf5ff; color: #9333ea; text-decoration: none; padding: 6px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; border: 1px solid #e9d5ff;">🧭 Rute ke Jembatan</a>
+                    <div style="display: flex; gap: 8px;">
+                      <a href="https://www.google.com/maps/dir/?api=1&destination=${(latlng as any).lat},${(latlng as any).lng}" target="_blank" style="flex: 1; text-align: center; background: #faf5ff; color: #9333ea; text-decoration: none; padding: 6px; border-radius: 6px; font-size: 10px; font-weight: bold; border: 1px solid #e9d5ff;">🧭 Rute</a>
+                      <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${(latlng as any).lat},${(latlng as any).lng}" target="_blank" style="flex: 1; text-align: center; background: #f8fafc; color: #0f172a; text-decoration: none; padding: 6px; border-radius: 6px; font-size: 10px; font-weight: bold; border: 1px solid #e2e8f0;">📸 Street View</a>
+                    </div>
                   </div>
                 `);
             }}
@@ -389,13 +445,58 @@ export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, b
                 <p style={{ margin: '0 0 2px 0', fontSize: '11px', whiteSpace: 'pre-wrap' }}><strong>Deskripsi:</strong> {r.description}</p>
                 <p style={{ margin: '0 0 6px 0', fontSize: '11px' }}><strong>Status:</strong> <span style={{ background: r.status === 'pending' ? '#fef3c7' : '#d1fae5', color: r.status === 'pending' ? '#b45309' : '#047857', padding: '2px 6px', borderRadius: '4px', textTransform: 'uppercase', fontSize: '9px', fontWeight: 'bold' }}>{r.status}</span></p>
                 <p style={{ margin: '0 0 8px 0', fontSize: '10px', color: '#64748b' }}>Waktu: {r.createdAt?.toDate ? r.createdAt.toDate().toLocaleString() : 'Baru saja'}</p>
-                <a href={`https://www.google.com/maps/dir/?api=1&destination=${r.lat},${r.lng}`} target="_blank" style={{ display: 'inline-block', background: '#fff1f2', color: '#e11d48', textDecoration: 'none', padding: '6px 10px', borderRadius: '6px', fontSize: '11px', fontWeight: 'bold', border: '1px solid #fecdd3' }}>🧭 Rute ke Titik Kerusakan</a>
+                <div style={{ display: 'flex', gap: '8px' }}>
+                  <a href={`https://www.google.com/maps/dir/?api=1&destination=${r.lat},${r.lng}`} target="_blank" style={{ flex: 1, textAlign: 'center', background: '#fff1f2', color: '#e11d48', textDecoration: 'none', padding: '6px', borderRadius: '6px', fontSize: '10px', fontWeight: 'bold', border: '1px solid #fecdd3' }}>🧭 Rute</a>
+                  <a href={`https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${r.lat},${r.lng}`} target="_blank" style={{ flex: 1, textAlign: 'center', background: '#f8fafc', color: '#0f172a', textDecoration: 'none', padding: '6px', borderRadius: '6px', fontSize: '10px', fontWeight: 'bold', border: '1px solid #e2e8f0' }}>📸 Street View</a>
+                </div>
               </div>
             </Popup>
           </Marker>
         ))}
 
+        <MeasureTool isMeasuring={isMeasuring} measurePoints={measurePoints} setMeasurePoints={setMeasurePoints} />
+
       </MapContainer>
+
+      {/* Measurement Tool Toggle */}
+      <div className="absolute top-20 right-4 md:right-6 z-[1000]">
+        <button 
+          onClick={() => {
+            setIsMeasuring(!isMeasuring);
+            if (isMeasuring) setMeasurePoints([]);
+          }}
+          className={`p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border flex items-center justify-center transition-all group ${isMeasuring ? 'bg-orange-500 text-white border-orange-600' : 'bg-white text-slate-600 border-slate-100 hover:bg-slate-50'}`}
+          title="Alat Ukur Jarak"
+        >
+          <Ruler size={24} />
+        </button>
+      </div>
+
+      {/* Measurement Status Panel */}
+      {isMeasuring && (
+        <div className="absolute bottom-28 right-4 md:right-6 z-[1000] bg-white rounded-2xl shadow-xl border border-slate-200 p-4 min-w-[200px]">
+          <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Total Jarak</p>
+          <p className="text-2xl font-black text-orange-600 mb-3">
+            {totalDistance > 1000 ? (totalDistance / 1000).toFixed(2) + ' km' : totalDistance.toFixed(0) + ' m'}
+          </p>
+          <div className="flex gap-2">
+            <button 
+              onClick={() => setMeasurePoints((prev) => prev.slice(0, -1))}
+              disabled={measurePoints.length === 0}
+              className="flex-1 bg-slate-100 text-slate-600 py-2 rounded-lg text-xs font-bold hover:bg-slate-200 disabled:opacity-50"
+            >
+              Undo
+            </button>
+            <button 
+              onClick={() => setMeasurePoints([])}
+              disabled={measurePoints.length === 0}
+              className="flex items-center justify-center bg-rose-100 text-rose-600 px-3 py-2 rounded-lg hover:bg-rose-200 disabled:opacity-50"
+            >
+              <Trash2 size={16} />
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Weather Widget */}
       {weather && (
