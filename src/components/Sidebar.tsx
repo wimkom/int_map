@@ -1,7 +1,8 @@
 import { MapPin, Activity, CheckCircle, Clock, Search, Navigation, List, Settings, Database, PlusCircle, Filter, PieChart, Info, Camera, Route, Map as MapIcon, Layers, Eye, EyeOff, AlertTriangle } from "lucide-react";
 import { useState, useMemo, useEffect } from "react";
-import { db } from "@/lib/firebase";
-import { collection, addDoc, getDocs, serverTimestamp, query, orderBy } from "firebase/firestore";
+import { db, storage } from "@/lib/firebase";
+import { collection, addDoc, getDocs, serverTimestamp, query, orderBy, updateDoc, doc } from "firebase/firestore";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 function getDistanceInMeters(lat1: number, lon1: number, lat2: number, lon2: number) {
   const R = 6371e3;
@@ -83,6 +84,8 @@ export default function Sidebar({
   const [reportDesc, setReportDesc] = useState("");
   const [reportType, setReportType] = useState("Lubang");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [reportImage, setReportImage] = useState<File | null>(null);
+  const [reportFilter, setReportFilter] = useState("semua");
 
   const handlings = roadGeoJson ? roadGeoJson.features.filter((f: any) => f.geometry.type === 'LineString') : [];
   
@@ -135,15 +138,25 @@ export default function Sidebar({
       async (pos) => {
         try {
           const { latitude, longitude } = pos.coords;
+          
+          let imageUrl = null;
+          if (reportImage) {
+            const fileRef = ref(storage, `reports/${Date.now()}_${reportImage.name}`);
+            await uploadBytes(fileRef, reportImage);
+            imageUrl = await getDownloadURL(fileRef);
+          }
+
           await addDoc(collection(db, "reports"), {
             type: reportType,
             description: reportDesc,
             lat: latitude,
             lng: longitude,
             createdAt: serverTimestamp(),
-            status: "pending"
+            status: "pending",
+            imageUrl: imageUrl
           });
           setReportDesc("");
+          setReportImage(null);
           alert("Laporan berhasil dikirim!");
           setActiveTab("dashboard");
         } catch (error) {
@@ -672,6 +685,15 @@ export default function Sidebar({
                   </select>
                 </div>
                 <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Foto Bukti (Opsional)</label>
+                  <input 
+                    type="file" 
+                    accept="image/*"
+                    onChange={(e) => setReportImage(e.target.files ? e.target.files[0] : null)}
+                    className="w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-bold file:bg-rose-50 file:text-rose-700 hover:file:bg-rose-100 transition-all border border-slate-200 rounded-xl bg-slate-50 p-1"
+                  />
+                </div>
+                <div>
                   <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Deskripsi Tambahan</label>
                   <textarea 
                     value={reportDesc}
@@ -695,23 +717,50 @@ export default function Sidebar({
               </form>
             </div>
 
-            <h2 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-3 mt-6">Daftar Laporan Masuk</h2>
+            <div className="flex justify-between items-center mb-3 mt-6">
+              <h2 className="text-xs font-black text-slate-400 uppercase tracking-widest">Daftar Laporan Masuk</h2>
+              <select 
+                value={reportFilter}
+                onChange={(e) => setReportFilter(e.target.value)}
+                className="text-[10px] font-bold bg-white border border-slate-200 rounded-md px-2 py-1 outline-none text-slate-600"
+              >
+                <option value="semua">Semua Status</option>
+                <option value="pending">Pending</option>
+                <option value="selesai">Selesai</option>
+              </select>
+            </div>
+            
             <div className="space-y-3">
-              {reports.length === 0 ? (
+              {reports.filter(r => reportFilter === "semua" || r.status === reportFilter).length === 0 ? (
                 <p className="text-xs text-slate-400 font-medium text-center py-6 bg-slate-100 rounded-xl border border-slate-200 border-dashed">Belum ada laporan.</p>
               ) : (
-                reports.map((r, i) => (
-                  <div key={r.id || i} className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex flex-col cursor-pointer hover:border-rose-300 transition-all" onClick={() => onSearchCoord([r.lat, r.lng])}>
+                reports.filter(r => reportFilter === "semua" || r.status === reportFilter).map((r, i) => (
+                  <div key={r.id || i} className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex flex-col hover:border-rose-300 transition-all relative overflow-hidden group">
                     <div className="flex justify-between items-start mb-2">
                       <span className="text-[10px] font-bold bg-rose-100 text-rose-700 px-2 py-0.5 rounded uppercase tracking-wider">{r.type}</span>
-                      <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded uppercase ${r.status === 'pending' ? 'bg-amber-100 text-amber-700' : 'bg-emerald-100 text-emerald-700'}`}>
+                      <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded uppercase cursor-pointer transition-colors ${r.status === 'pending' ? 'bg-amber-100 text-amber-700 hover:bg-amber-200' : 'bg-emerald-100 text-emerald-700 hover:bg-emerald-200'}`}
+                            title="Klik untuk mengubah status (Admin)"
+                            onClick={async (e) => {
+                              e.stopPropagation();
+                              if (confirm(`Ubah status laporan ini menjadi ${r.status === 'pending' ? 'Selesai' : 'Pending'}?`)) {
+                                await updateDoc(doc(db, "reports", r.id), { status: r.status === 'pending' ? 'selesai' : 'pending' });
+                              }
+                            }}
+                      >
                         {r.status}
                       </span>
                     </div>
-                    <p className="text-xs font-medium text-slate-700 line-clamp-2">{r.description}</p>
-                    <div className="flex items-center mt-3 pt-2 border-t border-slate-100">
-                      <MapPin size={12} className="text-slate-400 mr-1" />
-                      <span className="text-[10px] text-slate-500 font-semibold truncate">{r.lat.toFixed(5)}, {r.lng.toFixed(5)}</span>
+                    {r.imageUrl && (
+                      <div className="w-full h-24 bg-slate-100 rounded-lg mb-2 overflow-hidden cursor-pointer" onClick={() => window.open(r.imageUrl, '_blank')}>
+                        <img src={r.imageUrl} alt="Bukti Laporan" className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity" />
+                      </div>
+                    )}
+                    <p className="text-xs font-medium text-slate-700">{r.description}</p>
+                    <div className="flex justify-between items-center mt-3 pt-2 border-t border-slate-100">
+                      <div className="flex items-center cursor-pointer text-slate-500 hover:text-blue-600" onClick={() => onSearchCoord([r.lat, r.lng])}>
+                        <MapPin size={12} className="mr-1" />
+                        <span className="text-[10px] font-semibold truncate">{r.lat.toFixed(5)}, {r.lng.toFixed(5)}</span>
+                      </div>
                     </div>
                   </div>
                 ))

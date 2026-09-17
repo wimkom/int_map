@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { MapContainer, TileLayer, GeoJSON, useMap, Marker, Popup, LayersControl } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { LocateFixed } from "lucide-react";
+import { LocateFixed, Cloud, Sun, CloudRain } from "lucide-react";
 
 function getDistanceInMeters(lat1: number, lon1: number, lat2: number, lon2: number) {
   const R = 6371e3;
@@ -192,6 +192,18 @@ export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, b
   const [myLocationTrigger, setMyLocationTrigger] = useState(0);
   
   const [searchTrigger, setSearchTrigger] = useState(0);
+  const [weather, setWeather] = useState<any>(null);
+
+  useEffect(() => {
+    fetch("https://api.open-meteo.com/v1/forecast?latitude=-2.919&longitude=103.463&current_weather=true")
+      .then(res => res.json())
+      .then(data => {
+        if (data.current_weather) {
+          setWeather(data.current_weather);
+        }
+      })
+      .catch(console.error);
+  }, []);
 
   // When searchedCoord props update from parent (Sidebar), trigger popup
   useEffect(() => {
@@ -369,6 +381,11 @@ export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, b
             <Popup>
               <div style={{ fontFamily: 'sans-serif', padding: '4px' }}>
                 <h3 style={{ margin: '0 0 6px 0', fontSize: '14px', fontWeight: 'bold', color: '#e11d48', borderBottom: '1px solid #e2e8f0', paddingBottom: '4px' }}>🚨 Laporan: {r.type}</h3>
+                {r.imageUrl && (
+                  <div style={{ width: '100%', height: '120px', borderRadius: '8px', overflow: 'hidden', marginBottom: '8px' }}>
+                    <img src={r.imageUrl} alt="Bukti Laporan" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                )}
                 <p style={{ margin: '0 0 2px 0', fontSize: '11px', whiteSpace: 'pre-wrap' }}><strong>Deskripsi:</strong> {r.description}</p>
                 <p style={{ margin: '0 0 6px 0', fontSize: '11px' }}><strong>Status:</strong> <span style={{ background: r.status === 'pending' ? '#fef3c7' : '#d1fae5', color: r.status === 'pending' ? '#b45309' : '#047857', padding: '2px 6px', borderRadius: '4px', textTransform: 'uppercase', fontSize: '9px', fontWeight: 'bold' }}>{r.status}</span></p>
                 <p style={{ margin: '0 0 8px 0', fontSize: '10px', color: '#64748b' }}>Waktu: {r.createdAt?.toDate ? r.createdAt.toDate().toLocaleString() : 'Baru saja'}</p>
@@ -379,6 +396,17 @@ export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, b
         ))}
 
       </MapContainer>
+
+      {/* Weather Widget */}
+      {weather && (
+        <div className="absolute top-4 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:right-4 z-[1000] bg-white/90 backdrop-blur shadow-lg rounded-2xl p-2 px-4 border border-slate-200 flex items-center gap-3">
+          {weather.weathercode > 50 ? <CloudRain size={24} className="text-blue-500" /> : weather.weathercode > 2 ? <Cloud size={24} className="text-slate-400" /> : <Sun size={24} className="text-amber-500" />}
+          <div>
+            <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest leading-none">Cuaca Proyek</p>
+            <p className="text-sm font-black text-slate-800">{weather.temperature}°C</p>
+          </div>
+        </div>
+      )}
 
       {/* Floating GPS Button */}
       <div className="absolute bottom-6 right-4 md:right-6 z-[1000]">
