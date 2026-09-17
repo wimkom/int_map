@@ -1,5 +1,7 @@
-import { MapPin, Activity, CheckCircle, Clock, Search, Navigation, List, Settings, Database, PlusCircle, Filter, PieChart, Info, Camera, Route, Map as MapIcon, Layers, Eye, EyeOff } from "lucide-react";
-import { useState, useMemo } from "react";
+import { MapPin, Activity, CheckCircle, Clock, Search, Navigation, List, Settings, Database, PlusCircle, Filter, PieChart, Info, Camera, Route, Map as MapIcon, Layers, Eye, EyeOff, AlertTriangle } from "lucide-react";
+import { useState, useMemo, useEffect } from "react";
+import { db } from "@/lib/firebase";
+import { collection, addDoc, getDocs, serverTimestamp, query, orderBy } from "firebase/firestore";
 
 function getDistanceInMeters(lat1: number, lon1: number, lat2: number, lon2: number) {
   const R = 6371e3;
@@ -50,7 +52,8 @@ export default function Sidebar({
   showBridges, setShowBridges,
   showRoads, setShowRoads,
   showSta, setShowSta,
-  showBaseRoad, setShowBaseRoad
+  showBaseRoad, setShowBaseRoad,
+  reports, setReports
 }: { 
   onSearchCoord: (coord: [number, number]) => void,
   roadGeoJson: any,
@@ -63,7 +66,8 @@ export default function Sidebar({
   showBridges: boolean, setShowBridges: (v: boolean) => void,
   showRoads: boolean, setShowRoads: (v: boolean) => void,
   showSta: boolean, setShowSta: (v: boolean) => void,
-  showBaseRoad: boolean, setShowBaseRoad: (v: boolean) => void
+  showBaseRoad: boolean, setShowBaseRoad: (v: boolean) => void,
+  reports: any[], setReports: (r: any[]) => void
 }) {
   const [activeTab, setActiveTab] = useState("dashboard");
   const [latInput, setLatInput] = useState("");
@@ -74,6 +78,11 @@ export default function Sidebar({
   const [listMode, setListMode] = useState<"jalan" | "jembatan">("jalan");
   const [bridgeSearch, setBridgeSearch] = useState("");
   const [staRuasFilter, setStaRuasFilter] = useState("semua");
+
+  // Report States
+  const [reportDesc, setReportDesc] = useState("");
+  const [reportType, setReportType] = useState("Lubang");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handlings = roadGeoJson ? roadGeoJson.features.filter((f: any) => f.geometry.type === 'LineString') : [];
   
@@ -115,6 +124,41 @@ export default function Sidebar({
     if (!bridges) return 0;
     return bridges.features.reduce((sum: number, f: any) => sum + (f.properties.panjang || 0), 0);
   }, [bridges]);
+
+  const handleReportSubmit = async (e: any) => {
+    e.preventDefault();
+    if (!reportDesc.trim()) return alert("Isi deskripsi!");
+    if (!navigator.geolocation) return alert("Browser tidak mendukung GPS.");
+
+    setIsSubmitting(true);
+    navigator.geolocation.getCurrentPosition(
+      async (pos) => {
+        try {
+          const { latitude, longitude } = pos.coords;
+          await addDoc(collection(db, "reports"), {
+            type: reportType,
+            description: reportDesc,
+            lat: latitude,
+            lng: longitude,
+            createdAt: serverTimestamp(),
+            status: "pending"
+          });
+          setReportDesc("");
+          alert("Laporan berhasil dikirim!");
+          setActiveTab("dashboard");
+        } catch (error) {
+          console.error(error);
+          alert("Gagal mengirim laporan.");
+        } finally {
+          setIsSubmitting(false);
+        }
+      },
+      (error) => {
+        alert("Gagal mendapatkan lokasi GPS.");
+        setIsSubmitting(false);
+      }
+    );
+  };
 
   const handleSearchGPS = () => {
     const lat = parseFloat(latInput);
@@ -239,6 +283,7 @@ export default function Sidebar({
             { id: 'dashboard', icon: PieChart, label: 'Dash' },
             { id: 'list', icon: List, label: 'Daftar' },
             { id: 'search', icon: Search, label: 'Cari' },
+            { id: 'laporan', icon: Camera, label: 'Lapor' },
             { id: 'settings', icon: Settings, label: 'Sistem' }
           ].map(tab => (
             <button 
@@ -601,7 +646,79 @@ export default function Sidebar({
           </div>
         )}
 
+        {/* LAPORAN TAB */}
+        {activeTab === "laporan" && (
+          <div className="p-4 animate-in fade-in duration-300">
+            <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm mb-4">
+              <div className="w-10 h-10 bg-rose-50 text-rose-600 rounded-full flex items-center justify-center mb-4">
+                <Camera size={20} />
+              </div>
+              <h2 className="text-lg font-black text-slate-800 mb-1">Lapor Kerusakan</h2>
+              <p className="text-xs font-medium text-slate-500 mb-5 leading-relaxed">Laporkan kerusakan infrastruktur langsung dari lapangan menggunakan GPS.</p>
+              
+              <form onSubmit={handleReportSubmit} className="space-y-4">
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Jenis Kerusakan</label>
+                  <select 
+                    value={reportType}
+                    onChange={(e) => setReportType(e.target.value)}
+                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-rose-500 focus:bg-white transition-all appearance-none"
+                  >
+                    <option value="Lubang">Lubang (Pothole)</option>
+                    <option value="Retak">Retak (Cracking)</option>
+                    <option value="Longsor">Longsor / Amblas</option>
+                    <option value="Jembatan Rusak">Jembatan Rusak</option>
+                    <option value="Lainnya">Lainnya</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Deskripsi Tambahan</label>
+                  <textarea 
+                    value={reportDesc}
+                    onChange={(e) => setReportDesc(e.target.value)}
+                    placeholder="Catatan mengenai kerusakan..." 
+                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-rose-500 focus:bg-white transition-all h-24 resize-none" 
+                  />
+                </div>
+                <button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="w-full bg-rose-600 hover:bg-rose-700 disabled:bg-rose-300 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg hover:shadow-rose-500/30 transition-all flex justify-center items-center text-sm mt-2"
+                >
+                  {isSubmitting ? (
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                  ) : (
+                    <MapPin size={18} className="mr-2" />
+                  )}
+                  {isSubmitting ? 'Mengirim...' : 'Kirim dengan Titik GPS Saya'}
+                </button>
+              </form>
+            </div>
 
+            <h2 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-3 mt-6">Daftar Laporan Masuk</h2>
+            <div className="space-y-3">
+              {reports.length === 0 ? (
+                <p className="text-xs text-slate-400 font-medium text-center py-6 bg-slate-100 rounded-xl border border-slate-200 border-dashed">Belum ada laporan.</p>
+              ) : (
+                reports.map((r, i) => (
+                  <div key={r.id || i} className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex flex-col cursor-pointer hover:border-rose-300 transition-all" onClick={() => onSearchCoord([r.lat, r.lng])}>
+                    <div className="flex justify-between items-start mb-2">
+                      <span className="text-[10px] font-bold bg-rose-100 text-rose-700 px-2 py-0.5 rounded uppercase tracking-wider">{r.type}</span>
+                      <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded uppercase ${r.status === 'pending' ? 'bg-amber-100 text-amber-700' : 'bg-emerald-100 text-emerald-700'}`}>
+                        {r.status}
+                      </span>
+                    </div>
+                    <p className="text-xs font-medium text-slate-700 line-clamp-2">{r.description}</p>
+                    <div className="flex items-center mt-3 pt-2 border-t border-slate-100">
+                      <MapPin size={12} className="text-slate-400 mr-1" />
+                      <span className="text-[10px] text-slate-500 font-semibold truncate">{r.lat.toFixed(5)}, {r.lng.toFixed(5)}</span>
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+        )}
 
         {/* SETTINGS TAB */}
         {activeTab === "settings" && (

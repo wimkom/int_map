@@ -4,6 +4,8 @@ import dynamic from "next/dynamic";
 import Sidebar from "@/components/Sidebar";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { db } from "@/lib/firebase";
+import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 
 // Dynamically import map to avoid SSR issues with Leaflet
 const MapWithNoSSR = dynamic(() => import("@/components/Map"), {
@@ -26,6 +28,7 @@ export default function Home() {
   const [staLabels, setStaLabels] = useState<any>(null);
   const [bridges, setBridges] = useState<any>(null);
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
+  const [reports, setReports] = useState<any[]>([]);
 
   // Map Layer States
   const [showBridges, setShowBridges] = useState(true);
@@ -33,6 +36,7 @@ export default function Home() {
   const [showSta, setShowSta] = useState(true);
   const [showBaseRoad, setShowBaseRoad] = useState(true);
 
+  // Fetch GeoJSONs
   useEffect(() => {
     setRoadGeoJson(null);
     setBaseRoad(null);
@@ -43,6 +47,19 @@ export default function Home() {
     fetch('/sta_labels_full.geojson').then(res => res.json()).then(setStaLabels).catch(console.error);
     fetch('/bridges.json').then(res => res.json()).then(setBridges).catch(console.error);
   }, [activeDatabase]);
+
+  // Firebase Realtime Listener
+  useEffect(() => {
+    const q = query(collection(db, "reports"), orderBy("createdAt", "desc"));
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const data = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      setReports(data);
+    }, (error) => {
+      console.error("Error fetching reports: ", error);
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   return (
     <main className="flex h-[100dvh] w-full bg-slate-100 overflow-hidden relative">
@@ -89,6 +106,7 @@ export default function Home() {
           showRoads={showRoads} setShowRoads={setShowRoads}
           showSta={showSta} setShowSta={setShowSta}
           showBaseRoad={showBaseRoad} setShowBaseRoad={setShowBaseRoad}
+          reports={reports} setReports={setReports}
         />
       </div>
 
@@ -109,6 +127,7 @@ export default function Home() {
           baseRoad={showBaseRoad ? baseRoad : null}
           staLabels={showSta ? staLabels : null}
           bridges={showBridges ? bridges : null}
+          reports={reports}
         />
       </div>
 

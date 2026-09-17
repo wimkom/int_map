@@ -185,7 +185,7 @@ const createBridgeIcon = () => {
   });
 };
 
-export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, baseRoad, staLabels, bridges }: any) {
+export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, baseRoad, staLabels, bridges, reports }: any) {
   const center: [number, number] = [-2.919, 103.463];
   
   const [myLocation, setMyLocation] = useState<[number, number] | null>(null);
@@ -353,6 +353,30 @@ export default function Map({ searchedCoord, focusedFeatureCoord, roadGeoJson, b
             }}
           />
         )}
+
+        {reports && reports.map((r: any) => (
+          <Marker 
+            key={r.id} 
+            position={[r.lat, r.lng]} 
+            icon={new L.DivIcon({
+              className: "report-icon",
+              html: `<div style="background-color: #f43f5e; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); font-weight: bold; font-size: 14px;">!</div>`,
+              iconSize: [28, 28],
+              iconAnchor: [14, 14],
+              popupAnchor: [0, -14]
+            })}
+          >
+            <Popup>
+              <div style={{ fontFamily: 'sans-serif', padding: '4px' }}>
+                <h3 style={{ margin: '0 0 6px 0', fontSize: '14px', fontWeight: 'bold', color: '#e11d48', borderBottom: '1px solid #e2e8f0', paddingBottom: '4px' }}>🚨 Laporan: {r.type}</h3>
+                <p style={{ margin: '0 0 2px 0', fontSize: '11px', whiteSpace: 'pre-wrap' }}><strong>Deskripsi:</strong> {r.description}</p>
+                <p style={{ margin: '0 0 6px 0', fontSize: '11px' }}><strong>Status:</strong> <span style={{ background: r.status === 'pending' ? '#fef3c7' : '#d1fae5', color: r.status === 'pending' ? '#b45309' : '#047857', padding: '2px 6px', borderRadius: '4px', textTransform: 'uppercase', fontSize: '9px', fontWeight: 'bold' }}>{r.status}</span></p>
+                <p style={{ margin: '0 0 8px 0', fontSize: '10px', color: '#64748b' }}>Waktu: {r.createdAt?.toDate ? r.createdAt.toDate().toLocaleString() : 'Baru saja'}</p>
+                <a href={`https://www.google.com/maps/dir/?api=1&destination=${r.lat},${r.lng}`} target="_blank" style={{ display: 'inline-block', background: '#fff1f2', color: '#e11d48', textDecoration: 'none', padding: '6px 10px', borderRadius: '6px', fontSize: '11px', fontWeight: 'bold', border: '1px solid #fecdd3' }}>🧭 Rute ke Titik Kerusakan</a>
+              </div>
+            </Popup>
+          </Marker>
+        ))}
 
       </MapContainer>
 
